@@ -64,6 +64,7 @@ namespace Nekoyume.UI
         private EquipmentSlot _armorSlot;
         private bool _isShownFromMenu;
         private bool _isShownFromBattle;
+        private bool _isShownFromLoading;
         private Player _player;
         private Vector3 _previousAvatarPosition;
         private int _previousSortingLayerID;
@@ -148,6 +149,8 @@ namespace Nekoyume.UI
             var currentAvatarState = Game.Game.instance.States.CurrentAvatarState;
             _isShownFromMenu = Find<Menu>().gameObject.activeSelf;
             _isShownFromBattle = Find<Battle>().gameObject.activeSelf;
+            _isShownFromLoading = Find<StageLoadingScreen>().gameObject.activeSelf ||
+                                  Find<LoadingScreen>().gameObject.activeSelf;
             IsTweenEnd.Value = false;
             Show(currentAvatarState, ignoreShowAnimation);
         }
@@ -186,7 +189,7 @@ namespace Nekoyume.UI
         {
             if (_player is null)
             {
-                if (_isShownFromBattle)
+                if (_isShownFromBattle || _isShownFromLoading)
                 {
                     _player = PlayerFactory
                         .Create(avatarState)
@@ -246,7 +249,7 @@ namespace Nekoyume.UI
                 return;
             }
 
-            if (_isShownFromBattle)
+            if (_isShownFromBattle || _isShownFromLoading)
             {
                 Game.Game.instance.Stage.objectPool.Remove<Player>(_player.gameObject);
                 _player = null;
@@ -369,7 +372,7 @@ namespace Nekoyume.UI
 
         private void Equip(CountableItem countableItem)
         {
-            if (_isShownFromBattle ||
+            if (_isShownFromBattle || _isShownFromLoading ||
                 !(countableItem is InventoryItem inventoryItem))
             {
                 return;
@@ -472,7 +475,7 @@ namespace Nekoyume.UI
 
         private void Unequip(EquipmentSlot slot, bool considerInventoryOnly)
         {
-            if (_isShownFromBattle)
+            if (_isShownFromBattle || _isShownFromLoading)
             {
                 return;
             }
@@ -716,17 +719,17 @@ namespace Nekoyume.UI
 
             return States.Instance.CurrentAvatarState.actionPoint !=
                    States.Instance.GameConfigState.ActionPointMax
-                   && !_isShownFromBattle;
+                   && !_isShownFromBattle && !_isShownFromLoading;
         }
 
         private bool DimmedFuncForChest(CountableItem item)
         {
-            return !(item is null) && item.Count.Value >= 1 && !_isShownFromBattle;
+            return !(item is null) && item.Count.Value >= 1 && !_isShownFromBattle && !_isShownFromLoading;
         }
 
         private bool DimmedFuncForEquipments(CountableItem item)
         {
-            return !item.Dimmed.Value && !_isShownFromBattle;
+            return !item.Dimmed.Value && !_isShownFromBattle && !_isShownFromLoading;
         }
 
         private static void ChargeActionPoint(CountableItem item)

@@ -2,6 +2,7 @@ using Nekoyume.UI.Module;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Nekoyume.EnumType;
 using Nekoyume.L10n;
 using UnityEngine;
 using UnityEngine.U2D;
@@ -11,6 +12,8 @@ namespace Nekoyume.UI
 {
     public class StageLoadingScreen : ScreenWidget
     {
+        public override WidgetType WidgetType => WidgetType.Widget;
+
         private const string SpriteAtlasPathFormat = "SpriteAtlases/Background/{0}";
         private const string SpriteNameFormat01 = "{0}_01";
         private const string SpriteNameFormat02 = "{0}_02";
@@ -76,8 +79,22 @@ namespace Nekoyume.UI
                 worldName,
                 StageInformation.GetStageIdString(stageId));
             indicator.Show(message);
+            ShowBottomMenu();
             base.Show();
             StartCoroutine(CoRun());
+        }
+
+        private void ShowBottomMenu()
+        {
+            WidgetHandler.Instance.BottomMenu.Show(
+                UINavigator.NavigationType.None,
+                null,
+                false,
+                BottomMenu.ToggleableType.Mail,
+                BottomMenu.ToggleableType.Quest,
+                BottomMenu.ToggleableType.Chat,
+                BottomMenu.ToggleableType.IllustratedBook,
+                BottomMenu.ToggleableType.Character);
         }
 
         public override IEnumerator CoClose()

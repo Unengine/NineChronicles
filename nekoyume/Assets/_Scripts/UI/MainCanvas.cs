@@ -155,13 +155,13 @@ namespace Nekoyume.UI
                 // 스크린 영역. 로딩창류.
                 Widget.Create<GrayLoadingScreen>(),
                 Widget.Create<BlockSyncLoadingScreen>(),
-                Widget.Create<StageLoadingScreen>(),
+
                 Widget.Create<LoadingScreen>(),
                 Widget.Create<PreloadingScreen>(),
 
                 // 팝업 영역.
                 Widget.Create<Settings>(),
-                Widget.Create<Confirm>(),
+
 
                 // 팝업 영역: 알림.
                 Widget.Create<UpdatePopup>(),
@@ -230,6 +230,10 @@ namespace Nekoyume.UI
             secondWidgets.Add(Widget.Create<MimisbrunnrPreparation>());
             yield return null;
 
+            // 로딩
+            secondWidgets.Add(Widget.Create<StageLoadingScreen>());
+            yield return null;
+
             // 모듈류.
             secondWidgets.Add(Widget.Create<Mail>());
             yield return null;
@@ -242,6 +246,8 @@ namespace Nekoyume.UI
 
             // 팝업류.
             secondWidgets.Add(Widget.Create<BattleResult>());
+            yield return null;
+            secondWidgets.Add(Widget.Create<Confirm>());
             yield return null;
             secondWidgets.Add(Widget.Create<RankingBattleResult>());
             yield return null;
