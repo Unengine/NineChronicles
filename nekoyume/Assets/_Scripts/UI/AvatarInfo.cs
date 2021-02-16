@@ -71,7 +71,6 @@ namespace Nekoyume.UI
         private int _previousSortingLayerOrder;
         private bool _previousActivated;
         private CharacterStats _tempStats;
-        private Coroutine _constraintsPlayerToUI;
         private Coroutine _disableCpTween;
 
         public readonly ReactiveProperty<bool> IsTweenEnd = new ReactiveProperty<bool>(true);
@@ -212,38 +211,17 @@ namespace Nekoyume.UI
                 }
             }
 
-            _player.transform.position = avatarPosition.position;
+            _player.transform.SetParent(avatarPosition);
+            _player.transform.localPosition = Vector3.zero;
 
             var orderInLayer = MainCanvas.instance.GetLayer(WidgetType).root.sortingOrder + 1;
             _player.SetSortingLayer(SortingLayer.NameToID("UI"), orderInLayer);
 
             _tempStats = _player.Model.Stats.Clone() as CharacterStats;
-
-            if (!(_constraintsPlayerToUI is null))
-            {
-                StopCoroutine(_constraintsPlayerToUI);
-            }
-
-            _constraintsPlayerToUI = StartCoroutine(CoConstraintsPlayerToUI(_player.transform));
-        }
-
-        private IEnumerator CoConstraintsPlayerToUI(Transform playerTransform)
-        {
-            while (enabled && playerTransform)
-            {
-                playerTransform.position = avatarPosition.position;
-                yield return null;
-            }
         }
 
         private void ReturnPlayer()
         {
-            if (!(_constraintsPlayerToUI is null))
-            {
-                StopCoroutine(_constraintsPlayerToUI);
-                _constraintsPlayerToUI = null;
-            }
-
             if (_player is null)
             {
                 return;
@@ -277,6 +255,7 @@ namespace Nekoyume.UI
                 _player.transform.position += new Vector3(-0.17f, -0.05f);
             }
             var currentAvatarState = Game.Game.instance.States.CurrentAvatarState;
+            _player.transform.SetParent(Game.Game.instance.Stage.transform);
             _player.Set(currentAvatarState);
             _player.SetSortingLayer(_previousSortingLayerID, _previousSortingLayerOrder);
             _player.gameObject.SetActive(_previousActivated);
