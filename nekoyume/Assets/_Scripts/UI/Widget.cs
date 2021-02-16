@@ -375,7 +375,7 @@ namespace Nekoyume.UI
 
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                if (!WidgetHandler.Instance.isActiveTutorialMaskWidget)
+                if (!WidgetHandler.Instance.IsActiveTutorialMaskWidget)
                 {
                     WidgetHandler.Instance.HideAllMessageCat();
                     CloseWidget?.Invoke();

@@ -6,7 +6,7 @@ using TMPro;
 
 namespace Nekoyume.UI
 {
-    public class LoadingScreen : ScreenWidget
+    public class LoadingScreen : Widget
     {
         public LoadingIndicator indicator;
         public TextMeshProUGUI toolTip;
@@ -20,6 +20,8 @@ namespace Nekoyume.UI
         protected override void Awake()
         {
             base.Awake();
+
+            CloseWidget = null;
 
             if (L10nManager.CurrentState == L10nManager.State.Initialized)
             {

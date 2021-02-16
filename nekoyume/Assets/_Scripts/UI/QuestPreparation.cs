@@ -234,7 +234,8 @@ namespace Nekoyume.UI
         public override void Close(bool ignoreCloseAnimation = false)
         {
             _reset = true;
-            Find<BottomMenu>().Close(ignoreCloseAnimation);
+            // Find<BottomMenu>().Close(ignoreCloseAnimation);
+            ShowBottomMenu();
 
             foreach (var slot in consumableSlots)
             {
@@ -630,7 +631,8 @@ namespace Nekoyume.UI
 
         private void Quest(bool repeat)
         {
-            Find<BottomMenu>().Close(true);
+            // Find<BottomMenu>().Close(true);
+            ShowBottomMenu();
             Find<LoadingScreen>().Show();
 
             questButton.gameObject.SetActive(false);
@@ -680,6 +682,19 @@ namespace Nekoyume.UI
             Game.Event.OnStageStart.Invoke(battleLog);
             Find<LoadingScreen>().Close();
             Close(true);
+        }
+
+        private void ShowBottomMenu()
+        {
+            WidgetHandler.Instance.BottomMenu.Show(
+                UINavigator.NavigationType.None,
+                null,
+                false,
+                BottomMenu.ToggleableType.Mail,
+                BottomMenu.ToggleableType.Quest,
+                BottomMenu.ToggleableType.Chat,
+                BottomMenu.ToggleableType.IllustratedBook,
+                BottomMenu.ToggleableType.Character);
         }
 
         public void SimulateBattle()

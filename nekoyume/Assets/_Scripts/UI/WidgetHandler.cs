@@ -7,25 +7,29 @@ namespace Nekoyume.UI
     {
         private static WidgetHandler _instance;
         public static WidgetHandler Instance => _instance ?? (_instance = new WidgetHandler());
-
-        public bool isActiveTutorialMaskWidget { get; set; }
-
         private MessageCatManager _messageCatManager;
+        private BottomMenu _bottomMenu;
+
+        public bool IsActiveTutorialMaskWidget { get; set; }
 
         public MessageCatManager MessageCatManager =>
             _messageCatManager
                 ? _messageCatManager
                 : (_messageCatManager = Widget.Find<MessageCatManager>());
 
-        private BottomMenu _bottomMenu;
-
         public BottomMenu BottomMenu =>
             _bottomMenu ? _bottomMenu : (_bottomMenu = Widget.Find<BottomMenu>());
 
-
         public void HideAllMessageCat()
         {
-            MessageCatManager?.HideAll(false);
+            try
+            {
+                MessageCatManager.HideAll(false);
+            }
+            catch (WidgetNotFoundException)
+            {
+                // Do Nothing.
+            }
         }
     }
 }

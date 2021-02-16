@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 namespace Nekoyume.UI
 {
-    public class StageLoadingScreen : ScreenWidget
+    public class StageLoadingScreen : Widget
     {
         public override WidgetType WidgetType => WidgetType.Widget;
 
@@ -25,6 +25,13 @@ namespace Nekoyume.UI
 
         private bool _shouldClose;
         private List<RectTransform> _rects;
+
+        protected override void Awake()
+        {
+            base.Awake();
+
+            CloseWidget = null;
+        }
 
         private static Sprite GetSprite(string background, string spriteNameFormat)
         {
