@@ -28,6 +28,8 @@ using UniRx;
 using mixpanel;
 using Nekoyume.Game.Character;
 using Nekoyume.L10n;
+using UnityEngine.Rendering;
+using Player = Nekoyume.Game.Character.Player;
 
 namespace Nekoyume.Game
 {
@@ -85,6 +87,7 @@ namespace Nekoyume.Game
         public bool showLoadingScreen;
 
         private Character.Player _stageRunningPlayer = null;
+        private Vector3 _playerPosition;
 
         private List<int> prevFood;
 
@@ -1037,7 +1040,7 @@ namespace Nekoyume.Game
             var characters = GetComponentsInChildren<Character.CharacterBase>();
             yield return new WaitWhile(() => characters.Any(i => i.actions.Any()));
             var character = GetCharacter(model);
-
+            _playerPosition = selectedPlayer.transform.position;
             character.Dead();
         }
 
@@ -1097,6 +1100,13 @@ namespace Nekoyume.Game
             return player;
         }
 
+        public Player RunPlayerForNextStage()
+        {
+            var player = GetPlayer(_playerPosition);
+            RunAndChasePlayer(player);
+            return player;
+        }
+
         /// <summary>
         /// 게임 캐릭터를 갖고 올 때 사용함.
         /// 갖고 올 때 매번 모델을 할당해주고 있음.
@@ -1110,10 +1120,26 @@ namespace Nekoyume.Game
             if (caster is null)
                 throw new ArgumentNullException(nameof(caster));
 
-            var character = GetComponentsInChildren<Character.CharacterBase>()
-                .FirstOrDefault(c => c.Id == caster.Id);
-            if (!(character is null))
-                character.Set(caster);
+            var characters = GetComponentsInChildren<Character.CharacterBase>()
+                .Where(c => c.Id == caster.Id);
+            var character = characters?.FirstOrDefault();
+
+            if (!(characters is null))
+            {
+                var ch = characters.First();
+
+                if (ch is null)
+                {
+                    Debug.Log("player is null");
+                }
+                if (ch is Player)
+                {
+                    character = characters.FirstOrDefault(x =>
+                        x.GetComponent<SortingGroup>().sortingLayerName == "Character");
+                }
+            }
+            character?.Set(caster);
+
             return character;
         }
 

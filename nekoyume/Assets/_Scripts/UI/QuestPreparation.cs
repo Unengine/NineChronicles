@@ -186,6 +186,8 @@ namespace Nekoyume.UI
                 _player.gameObject.SetActive(false);
                 _player.gameObject.SetActive(true);
                 _player.SpineController.Appear();
+                var currentAvatarState = Game.Game.instance.States.CurrentAvatarState;
+                _player.Set(currentAvatarState);
 
                 equipmentSlots.SetPlayerEquipments(_player.Model, ShowTooltip, Unequip);
                 // 인벤토리 아이템의 장착 여부를 `equipmentSlots`의 상태를 바탕으로 설정하기 때문에 `equipmentSlots.SetPlayer()`를 호출한 이후에 인벤토리 아이템의 장착 상태를 재설정한다.
@@ -234,8 +236,7 @@ namespace Nekoyume.UI
         public override void Close(bool ignoreCloseAnimation = false)
         {
             _reset = true;
-            // Find<BottomMenu>().Close(ignoreCloseAnimation);
-            ShowBottomMenu();
+            Find<BottomMenu>().Close(ignoreCloseAnimation);
 
             foreach (var slot in consumableSlots)
             {
@@ -631,8 +632,7 @@ namespace Nekoyume.UI
 
         private void Quest(bool repeat)
         {
-            // Find<BottomMenu>().Close(true);
-            ShowBottomMenu();
+            Find<BottomMenu>().Close(true);
             Find<LoadingScreen>().Show();
 
             questButton.gameObject.SetActive(false);
@@ -682,19 +682,6 @@ namespace Nekoyume.UI
             Game.Event.OnStageStart.Invoke(battleLog);
             Find<LoadingScreen>().Close();
             Close(true);
-        }
-
-        private void ShowBottomMenu()
-        {
-            WidgetHandler.Instance.BottomMenu.Show(
-                UINavigator.NavigationType.None,
-                null,
-                false,
-                BottomMenu.ToggleableType.Mail,
-                BottomMenu.ToggleableType.Quest,
-                BottomMenu.ToggleableType.Chat,
-                BottomMenu.ToggleableType.IllustratedBook,
-                BottomMenu.ToggleableType.Character);
         }
 
         public void SimulateBattle()

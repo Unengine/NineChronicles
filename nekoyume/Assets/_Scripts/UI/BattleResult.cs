@@ -176,6 +176,7 @@ namespace Nekoyume.UI
         public void Show(Model model)
         {
             canvasGroup.alpha = 1f;
+            canvasGroup.blocksRaycasts = true;
             SharedModel = model;
 
             worldStageId.text = $"{SharedModel.WorldName} {StageInformation.GetStageIdString(SharedModel.StageID)}";
@@ -436,8 +437,7 @@ namespace Nekoyume.UI
             Find<Status>().Close();
 
             StopVFX();
-
-            var player = stage.RunPlayer(stage.selectedPlayer.transform.position);
+            var player = stage.RunPlayerForNextStage();
             player.DisableHUD();
 
             var worldId = stage.worldId;
@@ -538,6 +538,7 @@ namespace Nekoyume.UI
             }
 
             canvasGroup.alpha = 0f;
+            canvasGroup.blocksRaycasts = false;
         }
 
         private void StopVFX()
