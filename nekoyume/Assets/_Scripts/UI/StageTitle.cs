@@ -2,7 +2,7 @@ using TMPro;
 
 namespace Nekoyume.UI
 {
-    public class StageTitle : PopupWidget
+    public class StageTitle : Widget
     {
         public TextMeshProUGUI textStage;
 

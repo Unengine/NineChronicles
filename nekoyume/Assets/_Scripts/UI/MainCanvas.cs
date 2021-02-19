@@ -234,6 +234,8 @@ namespace Nekoyume.UI
             yield return null;
 
             // 모듈류.
+            secondWidgets.Add(Widget.Create<StageTitle>());
+            yield return null;
             secondWidgets.Add(Widget.Create<Mail>());
             yield return null;
             secondWidgets.Add(Widget.Create<Quest>());
@@ -251,8 +253,6 @@ namespace Nekoyume.UI
             secondWidgets.Add(Widget.Create<ItemCountAndPricePopup>());
             yield return null;
             secondWidgets.Add(Widget.Create<CombinationResultPopup>());
-            yield return null;
-            secondWidgets.Add(Widget.Create<StageTitle>());
             yield return null;
             secondWidgets.Add(Widget.Create<Alert>());
             yield return null;

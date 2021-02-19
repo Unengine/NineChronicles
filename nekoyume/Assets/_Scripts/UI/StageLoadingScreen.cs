@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Nekoyume.EnumType;
 using Nekoyume.L10n;
+using Nekoyume.State;
 using UnityEngine;
 using UnityEngine.U2D;
 using UnityEngine.UI;
@@ -103,23 +104,13 @@ namespace Nekoyume.UI
                 worldName,
                 StageInformation.GetStageIdString(stageId));
             indicator.Show(message);
-            ShowBottomMenu();
-        }
 
-        private void ShowBottomMenu()
-        {
-            WidgetHandler.Instance.BottomMenu.Show(
-                UINavigator.NavigationType.Exit,
-                null,
-                false,
-                BottomMenu.ToggleableType.Mail,
-                BottomMenu.ToggleableType.Quest,
-                BottomMenu.ToggleableType.Chat,
-                BottomMenu.ToggleableType.IllustratedBook,
-                BottomMenu.ToggleableType.Character,
-                BottomMenu.ToggleableType.Combination,
-                BottomMenu.ToggleableType.Settings);
-            WidgetHandler.Instance.BottomMenu.exitButton.SetInteractable(false);
+            if (States.Instance.CurrentAvatarState.worldInformation
+                    .TryGetUnlockedWorldByStageClearedBlockIndex(out var world) &&
+                world.StageClearedId >= GameConfig.RequireClearedStageLevel.UIBottomMenuInBattle)
+            {
+                WidgetHandler.Instance.Battle.ShowBottomMenu(world, false);
+            }
         }
 
         private IEnumerator CoDialog(int worldStage)
@@ -149,7 +140,6 @@ namespace Nekoyume.UI
         {
             _shouldClose = true;
             yield return new WaitUntil(() => closeEnd);
-            WidgetHandler.Instance.BottomMenu.exitButton.SetInteractable(true);
             gameObject.SetActive(false);
         }
 
