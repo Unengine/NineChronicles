@@ -97,18 +97,24 @@ namespace Nekoyume.UI
             {
                 var showExitButton = world.StageClearedId >= RequiredStageForExitButton;
 
-                var bottomMenu = Find<BottomMenu>();
-                bottomMenu.Show(
-                    showExitButton ?
-                        UINavigator.NavigationType.Exit :
-                        UINavigator.NavigationType.None,
-                    SubscribeOnExitButtonClick,
-                    false,
-                    BottomMenu.ToggleableType.Mail,
-                    BottomMenu.ToggleableType.Quest,
-                    BottomMenu.ToggleableType.Chat,
-                    BottomMenu.ToggleableType.IllustratedBook,
-                    BottomMenu.ToggleableType.Character);
+
+                var bottomMenu = WidgetHandler.Instance.BottomMenu;
+                if (!bottomMenu.isActiveAndEnabled)
+                {
+                    bottomMenu.Show(
+                        showExitButton ?
+                            UINavigator.NavigationType.Exit :
+                            UINavigator.NavigationType.None,
+                        SubscribeOnExitButtonClick,
+                        false,
+                        BottomMenu.ToggleableType.Mail,
+                        BottomMenu.ToggleableType.Quest,
+                        BottomMenu.ToggleableType.Chat,
+                        BottomMenu.ToggleableType.IllustratedBook,
+                        BottomMenu.ToggleableType.Character,
+                        BottomMenu.ToggleableType.Combination,
+                        BottomMenu.ToggleableType.Settings);
+                }
 
                 bottomMenu.exitButton.SetToggleListener(this);
                 bottomMenu.exitButton.SharedModel.IsEnabled.Value = isExitReserved;

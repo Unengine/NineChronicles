@@ -109,7 +109,7 @@ namespace Nekoyume.UI
         private void ShowBottomMenu()
         {
             WidgetHandler.Instance.BottomMenu.Show(
-                UINavigator.NavigationType.None,
+                UINavigator.NavigationType.Exit,
                 null,
                 false,
                 BottomMenu.ToggleableType.Mail,
@@ -119,6 +119,7 @@ namespace Nekoyume.UI
                 BottomMenu.ToggleableType.Character,
                 BottomMenu.ToggleableType.Combination,
                 BottomMenu.ToggleableType.Settings);
+            WidgetHandler.Instance.BottomMenu.exitButton.SetInteractable(false);
         }
 
         private IEnumerator CoDialog(int worldStage)
@@ -148,6 +149,7 @@ namespace Nekoyume.UI
         {
             _shouldClose = true;
             yield return new WaitUntil(() => closeEnd);
+            WidgetHandler.Instance.BottomMenu.exitButton.SetInteractable(true);
             gameObject.SetActive(false);
         }
 

@@ -146,9 +146,8 @@ namespace Nekoyume.UI
         {
             var currentAvatarState = Game.Game.instance.States.CurrentAvatarState;
             _isShownFromMenu = Find<Menu>().gameObject.activeSelf;
-            _isShownFromBattle = Find<Battle>().gameObject.activeSelf;
-            _isShownFromLoading = Find<StageLoadingScreen>().gameObject.activeSelf ||
-                                  Find<LoadingScreen>().gameObject.activeSelf;
+            _isShownFromBattle = WidgetHandler.Instance.Battle.gameObject.activeSelf;
+            _isShownFromLoading = WidgetHandler.Instance.StageLoadingScreen.gameObject.activeSelf;
             IsTweenEnd.Value = false;
             Show(currentAvatarState, ignoreShowAnimation);
         }
