@@ -412,26 +412,6 @@ namespace Nekoyume.Game
             }
         }
 
-        private static IEnumerator CoDialog(int worldStage)
-        {
-            var stageDialogs = Game.instance.TableSheets.StageDialogSheet.Values
-                .Where(i => i.StageId == worldStage)
-                .OrderBy(i => i.DialogId)
-                .ToArray();
-            if (!stageDialogs.Any())
-            {
-                yield break;
-            }
-
-            var dialog = Widget.Find<Dialog>();
-
-            foreach (var stageDialog in stageDialogs)
-            {
-                dialog.Show(stageDialog.DialogId);
-                yield return new WaitWhile(() => dialog.gameObject.activeSelf);
-            }
-        }
-
         private static IEnumerator CoGuidedQuest(int stageIdToClear)
         {
             var done = false;
@@ -553,11 +533,6 @@ namespace Nekoyume.Game
             if (log.result == BattleLog.Result.Win)
             {
                 _stageRunningPlayer.DisableHUD();
-                if (isClear)
-                {
-                    yield return StartCoroutine(CoDialog(log.stageId));
-                }
-
                 _stageRunningPlayer.Animator.Win(log.clearedWaveNumber);
                 _stageRunningPlayer.ShowSpeech("PLAYER_WIN");
                 yield return new WaitForSeconds(2.2f);
@@ -1102,6 +1077,11 @@ namespace Nekoyume.Game
 
         public Player RunPlayerForNextStage()
         {
+            if (selectedPlayer != null)
+            {
+                _playerPosition = selectedPlayer.transform.position;
+            }
+
             var player = GetPlayer(_playerPosition);
             RunAndChasePlayer(player);
             return player;

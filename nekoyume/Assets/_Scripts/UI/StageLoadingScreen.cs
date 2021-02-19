@@ -21,6 +21,7 @@ namespace Nekoyume.UI
 
         public List<Image> images;
         public bool closeEnd;
+        public bool dialogEnd;
         public LoadingIndicator indicator;
 
         private bool _shouldClose;
@@ -64,8 +65,9 @@ namespace Nekoyume.UI
             return spriteAtlas;
         }
 
-        public void Show(string background, string worldName, int stageId)
+        public void Show(string background, string worldName, int stageId, bool isNext, int clearedStageId)
         {
+
             _shouldClose = false;
             _rects = new List<RectTransform>();
             var position = new Vector2(MainCanvas.instance.RectTransform.rect.width, 0f);
@@ -82,13 +84,26 @@ namespace Nekoyume.UI
                 position.x += ImageMargin;
                 _rects.Add(rect);
             }
+
+            base.Show();
+            StartCoroutine(ShowSequence(worldName, stageId, isNext, clearedStageId));
+            StartCoroutine(CoRun());
+        }
+
+        private IEnumerator ShowSequence(string worldName, int stageId, bool isNext, int clearedStageId)
+        {
+            indicator.Close();
+            dialogEnd = true;
+            if (isNext)
+            {
+                yield return CoDialog(clearedStageId);
+            }
+
             var message = string.Format(L10nManager.Localize("STAGE_BLOCK_CHAIN_MINING_TX"),
                 worldName,
                 StageInformation.GetStageIdString(stageId));
             indicator.Show(message);
             ShowBottomMenu();
-            base.Show();
-            StartCoroutine(CoRun());
         }
 
         private void ShowBottomMenu()
@@ -104,6 +119,29 @@ namespace Nekoyume.UI
                 BottomMenu.ToggleableType.Character,
                 BottomMenu.ToggleableType.Combination,
                 BottomMenu.ToggleableType.Settings);
+        }
+
+        private IEnumerator CoDialog(int worldStage)
+        {
+            dialogEnd = false;
+            var stageDialogs = Game.Game.instance.TableSheets.StageDialogSheet.Values
+                .Where(i => i.StageId == worldStage)
+                .OrderBy(i => i.DialogId)
+                .ToArray();
+            if (!stageDialogs.Any())
+            {
+                dialogEnd = true;
+                yield break;
+            }
+
+            var dialog = Widget.Find<Dialog>();
+            foreach (var stageDialog in stageDialogs)
+            {
+                dialog.Show(stageDialog.DialogId);
+                yield return new WaitWhile(() => dialog.gameObject.activeSelf);
+            }
+
+            dialogEnd = true;
         }
 
         public override IEnumerator CoClose()
@@ -142,7 +180,7 @@ namespace Nekoyume.UI
                     }
                 }
 
-                closeEnd = images.All(i => i.gameObject.activeSelf == false);
+                closeEnd = images.All(i => i.gameObject.activeSelf == false) && dialogEnd;
                 if (closeEnd) break;
                 yield return null;
             }

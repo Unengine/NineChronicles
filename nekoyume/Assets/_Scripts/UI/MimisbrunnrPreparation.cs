@@ -190,7 +190,7 @@ namespace Nekoyume.UI
             _player = _stage.GetPlayer(_stage.questPreparationPosition);
             var currentAvatarState = Game.Game.instance.States.CurrentAvatarState;
             _player.Set(currentAvatarState);
-            
+
             if (_player is null)
             {
                 throw new NotFoundComponentException<Game.Character.Player>();
