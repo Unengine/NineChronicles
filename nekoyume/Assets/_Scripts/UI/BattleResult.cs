@@ -12,6 +12,7 @@ using Nekoyume.L10n;
 using Nekoyume.Manager;
 using Nekoyume.Model.BattleStatus;
 using Nekoyume.Model.Item;
+using Nekoyume.State;
 using Nekoyume.UI.Model;
 using Nekoyume.UI.Module;
 using TMPro;
@@ -140,9 +141,17 @@ namespace Nekoyume.UI
             closeButton.OnClickAsObservable()
                 .Subscribe(_ =>
                 {
-                    AudioController.PlayClick();
-                    GoToMain();
-                    AnalyticsManager.Instance.BattleLeave();
+                    if (States.Instance.CurrentAvatarState.worldInformation
+                        .TryGetUnlockedWorldByStageClearedBlockIndex(out var world))
+                    {
+                        var canExit = world.StageClearedId >= Battle.RequiredStageForExitButton;
+                        if (canExit)
+                        {
+                            AudioController.PlayClick();
+                            GoToMain();
+                            AnalyticsManager.Instance.BattleLeave();
+                        }
+                    }
                 })
                 .AddTo(gameObject);
             submitButton.OnClickAsObservable()
@@ -357,6 +366,17 @@ namespace Nekoyume.UI
                 submitButtonText.text = SharedModel.ShouldRepeat
                     ? L10nManager.Localize("UI_BATTLE_AGAIN")
                     : L10nManager.Localize("UI_NEXT_STAGE");
+
+                if (SharedModel.StageID == 3 &&
+                    SharedModel.LastClearedStageId == 3 &&
+                    SharedModel.State == BattleLog.Result.Win)
+                {
+                    submitButton.gameObject.SetActive(false);
+                    bottomText.text = string.Empty;
+
+                    yield break;
+                }
+
                 submitButton.gameObject.SetActive(true);
             }
 
