@@ -176,8 +176,7 @@ namespace Nekoyume.UI.Module
             if (_data.Validate(States.Instance.CurrentAvatarState,
                 Game.Game.instance.Agent.BlockIndex))
             {
-                if (WidgetHandler.Instance.Battle.gameObject.activeSelf ||
-                    WidgetHandler.Instance.StageLoadingScreen.gameObject.activeSelf)
+                if (Game.Game.instance.Stage.IsInStage)
                 {
                     return;
                 }

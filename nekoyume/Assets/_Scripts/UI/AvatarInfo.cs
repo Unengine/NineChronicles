@@ -62,9 +62,6 @@ namespace Nekoyume.UI
 
         private EquipmentSlot _weaponSlot;
         private EquipmentSlot _armorSlot;
-        private bool _isShownFromMenu;
-        private bool _isShownFromBattle;
-        private bool _isShownFromLoading;
         private Player _player;
         private Vector3 _previousAvatarPosition;
         private int _previousSortingLayerID;
@@ -145,9 +142,6 @@ namespace Nekoyume.UI
         public override void Show(bool ignoreShowAnimation = false)
         {
             var currentAvatarState = Game.Game.instance.States.CurrentAvatarState;
-            _isShownFromMenu = Find<Menu>().gameObject.activeSelf;
-            _isShownFromBattle = WidgetHandler.Instance.Battle.gameObject.activeSelf;
-            _isShownFromLoading = WidgetHandler.Instance.StageLoadingScreen.gameObject.activeSelf;
             IsTweenEnd.Value = false;
             Show(currentAvatarState, ignoreShowAnimation);
         }
@@ -299,7 +293,7 @@ namespace Nekoyume.UI
 
         private void Equip(CountableItem countableItem)
         {
-            if (_isShownFromBattle || _isShownFromLoading ||
+            if (Game.Game.instance.Stage.IsInStage ||
                 !(countableItem is InventoryItem inventoryItem))
             {
                 return;
@@ -402,7 +396,7 @@ namespace Nekoyume.UI
 
         private void Unequip(EquipmentSlot slot, bool considerInventoryOnly)
         {
-            if (_isShownFromBattle || _isShownFromLoading)
+            if (Game.Game.instance.Stage.IsInStage)
             {
                 return;
             }
@@ -646,17 +640,17 @@ namespace Nekoyume.UI
 
             return States.Instance.CurrentAvatarState.actionPoint !=
                    States.Instance.GameConfigState.ActionPointMax
-                   && !_isShownFromBattle && !_isShownFromLoading;
+                   && !Game.Game.instance.Stage.IsInStage;
         }
 
         private bool DimmedFuncForChest(CountableItem item)
         {
-            return !(item is null) && item.Count.Value >= 1 && !_isShownFromBattle && !_isShownFromLoading;
+            return !(item is null) && item.Count.Value >= 1 && !Game.Game.instance.Stage.IsInStage;
         }
 
         private bool DimmedFuncForEquipments(CountableItem item)
         {
-            return !item.Dimmed.Value && !_isShownFromBattle && !_isShownFromLoading;
+            return !item.Dimmed.Value && !Game.Game.instance.Stage.IsInStage;
         }
 
         private static void ChargeActionPoint(CountableItem item)

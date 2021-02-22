@@ -386,6 +386,7 @@ namespace Nekoyume.UI
 
         private void QuestClick(bool repeat)
         {
+            _stage.IsInStage = true;
             StartCoroutine(CoQuestClick(repeat));
             questButton.interactable = false;
         }
@@ -455,6 +456,11 @@ namespace Nekoyume.UI
 
         private void Unequip(EquipmentSlot slot)
         {
+            if (_stage.IsInStage)
+            {
+                return;
+            }
+
             if (slot.IsEmpty)
             {
                 equipSlotGlow.SetActive(false);

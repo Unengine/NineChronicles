@@ -74,7 +74,7 @@ namespace Nekoyume.Game
         public SkillController SkillController { get; private set; }
         public BuffController BuffController { get; private set; }
         public TutorialController TutorialController { get; private set; }
-        public bool IsInStage { get; private set; }
+        public bool IsInStage { get; set; }
         public Model.Enemy Boss { get; private set; }
         public AvatarState AvatarState { get; set; }
 
@@ -232,6 +232,7 @@ namespace Nekoyume.Game
         {
             showLoadingScreen = showScreen;
             gameObject.AddComponent<RoomEntering>();
+            IsInStage = false;
         }
 
         // todo: 배경 캐싱.
@@ -404,7 +405,6 @@ namespace Nekoyume.Game
         public void ClearBattle()
         {
             _battleLog = null;
-            IsInStage = false;
             if (!(_battleCoroutine is null))
             {
                 StopCoroutine(_battleCoroutine);
