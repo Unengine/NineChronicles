@@ -261,7 +261,16 @@ namespace Nekoyume.UI.Module
             bool animateAlpha = true,
             params ToggleableType[] showButtons)
         {
-            CloseWidget = () => navigationAction?.Invoke(this);
+            var canClose = navigationType != UINavigator.NavigationType.None;
+
+            if (canClose)
+            {
+                CloseWidget = () => navigationAction?.Invoke(this);
+            }
+            else
+            {
+                CloseWidget = null;
+            }
 
             base.Show(animateAlpha);
 
@@ -387,8 +396,23 @@ namespace Nekoyume.UI.Module
                 return;
             }
 
-            HasNotificationInMail.OnNext(mailBox.Any(i =>
-                i.New && i.requiredBlockIndex <= _blockIndex));
+            var hasNotification = mailBox.Any(i =>
+                i.New && i.requiredBlockIndex <= _blockIndex);
+            HasNotificationInMail.OnNext(hasNotification);
+        }
+
+        private void SubscribeBlockIndex(long blockIndex)
+        {
+            _blockIndex = blockIndex;
+            var mailBox = Find<Mail>().MailBox;
+            if (!(mailBox is null))
+            {
+                var hasNotification = mailBox.Any(i =>
+                    i.New && i.requiredBlockIndex <= _blockIndex);
+                HasNotificationInMail.OnNext(hasNotification);
+            }
+
+            UpdateCombinationNotification();
         }
 
         private void SubscribeAvatarQuestList(QuestList questList)
@@ -403,19 +427,6 @@ namespace Nekoyume.UI.Module
                 quest.IsPaidInAction && quest.isReceivable));
             // todo: `Quest`와의 결합을 끊을 필요가 있어 보임.
             Find<Quest>().SetList(questList);
-        }
-
-        private void SubscribeBlockIndex(long blockIndex)
-        {
-            _blockIndex = blockIndex;
-            var mailBox = Find<Mail>().MailBox;
-            if (!(mailBox is null))
-            {
-                HasNotificationInMail.OnNext(mailBox.Any(i =>
-                    i.New && i.requiredBlockIndex <= _blockIndex));
-            }
-
-            UpdateCombinationNotification();
         }
 
         #endregion
@@ -797,5 +808,14 @@ namespace Nekoyume.UI.Module
                 States.Instance.CurrentAvatarState.level, blockIndex) ?? false;
             HasNotificationInCharacter.OnNext(hasNotification);
         }
+
+        public void TutorialActionClickBottomMenuWorkShopButton() =>
+            _toggleGroup.SetToggledOn(combinationButton);
+
+        public void TutorialActionClickBottomMenuMailButton() =>
+            _toggleGroup.SetToggledOn(mailButton);
+
+        public void TutorialActionClickBottomMenuCharacterButton() =>
+            _toggleGroup.SetToggledOn(characterButton);
     }
 }
