@@ -6,6 +6,7 @@ using Nekoyume.Game.Character;
 using Nekoyume.Game.Controller;
 using Nekoyume.Game.Factory;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace Nekoyume.Game.Trigger
 {
@@ -52,8 +53,9 @@ namespace Nekoyume.Game.Trigger
                 var monster = monsters[index];
                 monster.spawnIndex = index;
 
-                var player = stage.GetComponentInChildren<Character.Player>();
-                var offsetX = player.transform.position.x + SpawnOffset;
+                var players = stage.GetComponentsInChildren<Character.Player>();
+                var target = players.FirstOrDefault(x => x.GetComponent<SortingGroup>().sortingLayerName == "Character");
+                var offsetX = target.transform.position.x + SpawnOffset;
                 {
                     Vector3 point;
                     try
@@ -67,7 +69,7 @@ namespace Nekoyume.Game.Trigger
                     var pos = new Vector2(
                         point.x + offsetX,
                         point.y);
-                    yield return StartCoroutine(CoSpawnMonster(monster, pos, player));
+                    yield return StartCoroutine(CoSpawnMonster(monster, pos, target));
                 }
             }
         }

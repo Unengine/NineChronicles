@@ -155,7 +155,6 @@ namespace Nekoyume.UI
                 // 스크린 영역. 로딩창류.
                 Widget.Create<GrayLoadingScreen>(),
                 Widget.Create<BlockSyncLoadingScreen>(),
-                Widget.Create<StageLoadingScreen>(),
                 Widget.Create<LoadingScreen>(),
                 Widget.Create<PreloadingScreen>(),
 
@@ -230,7 +229,13 @@ namespace Nekoyume.UI
             secondWidgets.Add(Widget.Create<MimisbrunnrPreparation>());
             yield return null;
 
+            // 로딩
+            secondWidgets.Add(Widget.Create<StageLoadingScreen>());
+            yield return null;
+
             // 모듈류.
+            secondWidgets.Add(Widget.Create<StageTitle>());
+            yield return null;
             secondWidgets.Add(Widget.Create<Mail>());
             yield return null;
             secondWidgets.Add(Widget.Create<Quest>());
@@ -248,8 +253,6 @@ namespace Nekoyume.UI
             secondWidgets.Add(Widget.Create<ItemCountAndPricePopup>());
             yield return null;
             secondWidgets.Add(Widget.Create<CombinationResultPopup>());
-            yield return null;
-            secondWidgets.Add(Widget.Create<StageTitle>());
             yield return null;
             secondWidgets.Add(Widget.Create<Alert>());
             yield return null;

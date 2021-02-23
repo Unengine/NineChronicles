@@ -176,6 +176,11 @@ namespace Nekoyume.UI.Module
             if (_data.Validate(States.Instance.CurrentAvatarState,
                 Game.Game.instance.Agent.BlockIndex))
             {
+                if (Game.Game.instance.Stage.IsInStage)
+                {
+                    return;
+                }
+
                 Widget.Find<Menu>().CombinationClick(_slotIndex);
             }
             else

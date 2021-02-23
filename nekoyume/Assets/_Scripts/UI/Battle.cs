@@ -2,6 +2,7 @@ using System;
 using Nekoyume.Game.Controller;
 using Nekoyume.Game.Item;
 using Nekoyume.Game.VFX;
+using Nekoyume.Model;
 using Nekoyume.State;
 using Nekoyume.UI.Module;
 using UniRx;
@@ -95,23 +96,8 @@ namespace Nekoyume.UI
                 out var world) &&
                 world.StageClearedId >= GameConfig.RequireClearedStageLevel.UIBottomMenuInBattle)
             {
-                var showExitButton = world.StageClearedId >= RequiredStageForExitButton;
-
-                var bottomMenu = Find<BottomMenu>();
-                bottomMenu.Show(
-                    showExitButton ?
-                        UINavigator.NavigationType.Exit :
-                        UINavigator.NavigationType.None,
-                    SubscribeOnExitButtonClick,
-                    false,
-                    BottomMenu.ToggleableType.Mail,
-                    BottomMenu.ToggleableType.Quest,
-                    BottomMenu.ToggleableType.Chat,
-                    BottomMenu.ToggleableType.IllustratedBook,
-                    BottomMenu.ToggleableType.Character);
-
-                bottomMenu.exitButton.SetToggleListener(this);
-                bottomMenu.exitButton.SharedModel.IsEnabled.Value = isExitReserved;
+                ShowBottomMenu(world);
+                WidgetHandler.Instance.BottomMenu.exitButton.SharedModel.IsEnabled.Value = isExitReserved;
             }
             repeatButton.gameObject.SetActive(stageId >= 4 || world.StageClearedId >= 4);
             helpButton.gameObject.SetActive(true);
@@ -123,6 +109,32 @@ namespace Nekoyume.UI
             Find<BottomMenu>().Close(ignoreCloseAnimation);
             enemyPlayerStatus.Close(ignoreCloseAnimation);
             base.Close(ignoreCloseAnimation);
+        }
+
+        public void ShowBottomMenu(WorldInformation.World world, bool isInteractableExitButton = true)
+        {
+            var showExitButton = world.StageClearedId >= RequiredStageForExitButton;
+
+            var bottomMenu = WidgetHandler.Instance.BottomMenu;
+            if (!bottomMenu.isActiveAndEnabled)
+            {
+                WidgetHandler.Instance.BottomMenu.Show(
+                    showExitButton ?
+                        UINavigator.NavigationType.Exit :
+                        UINavigator.NavigationType.None,
+                    SubscribeOnExitButtonClick,
+                    false,
+                    BottomMenu.ToggleableType.Mail,
+                    BottomMenu.ToggleableType.Quest,
+                    BottomMenu.ToggleableType.Chat,
+                    BottomMenu.ToggleableType.IllustratedBook,
+                    BottomMenu.ToggleableType.Character,
+                    BottomMenu.ToggleableType.Combination,
+                    BottomMenu.ToggleableType.Settings);
+            }
+
+            WidgetHandler.Instance.BottomMenu.exitButton.SetToggleListener(this);
+            WidgetHandler.Instance.BottomMenu.exitButton.SetInteractable(isInteractableExitButton);
         }
 
         public void ClearStage(int stageId, System.Action<bool> onComplete)

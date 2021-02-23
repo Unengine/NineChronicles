@@ -186,6 +186,8 @@ namespace Nekoyume.UI
                 _player.gameObject.SetActive(false);
                 _player.gameObject.SetActive(true);
                 _player.SpineController.Appear();
+                var currentAvatarState = Game.Game.instance.States.CurrentAvatarState;
+                _player.Set(currentAvatarState);
 
                 equipmentSlots.SetPlayerEquipments(_player.Model, ShowTooltip, Unequip);
                 // 인벤토리 아이템의 장착 여부를 `equipmentSlots`의 상태를 바탕으로 설정하기 때문에 `equipmentSlots.SetPlayer()`를 호출한 이후에 인벤토리 아이템의 장착 상태를 재설정한다.
@@ -384,6 +386,7 @@ namespace Nekoyume.UI
 
         private void QuestClick(bool repeat)
         {
+            _stage.IsInStage = true;
             StartCoroutine(CoQuestClick(repeat));
             questButton.interactable = false;
         }
@@ -453,6 +456,11 @@ namespace Nekoyume.UI
 
         private void Unequip(EquipmentSlot slot)
         {
+            if (_stage.IsInStage)
+            {
+                return;
+            }
+
             if (slot.IsEmpty)
             {
                 equipSlotGlow.SetActive(false);

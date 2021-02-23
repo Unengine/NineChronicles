@@ -130,6 +130,8 @@ namespace Nekoyume.UI
 
         private Animator _victoryImageAnimator;
 
+        private bool _IsAlreadyOut = false;
+
         public Model SharedModel { get; private set; }
 
         public StageProgressBar StageProgressBar => stageProgressBar;
@@ -147,9 +149,8 @@ namespace Nekoyume.UI
                         var canExit = world.StageClearedId >= Battle.RequiredStageForExitButton;
                         if (canExit)
                         {
-                            AudioController.PlayClick();
-                            GoToMain();
-                            AnalyticsManager.Instance.BattleLeave();
+                            StartCoroutine(OnClickClose());
+
                         }
                     }
                 })
@@ -157,10 +158,7 @@ namespace Nekoyume.UI
             submitButton.OnClickAsObservable()
                 .Subscribe(_ =>
                 {
-                    AudioController.PlayClick();
-                    StartCoroutine(CoRepeatCurrentOrProceedNextStage());
-                    AnalyticsManager.Instance.OnEvent(AnalyticsManager.EventName
-                        .ClickBattleResultNext);
+                    StartCoroutine(OnClickSubmit());
                 })
                 .AddTo(gameObject);
 
@@ -173,10 +171,57 @@ namespace Nekoyume.UI
             _victoryImageAnimator = victoryImageContainer.GetComponent<Animator>();
         }
 
+        private IEnumerator OnClickClose()
+        {
+            _IsAlreadyOut = true;
+            AudioController.PlayClick();
+            if (SharedModel.State == BattleLog.Result.Win)
+            {
+                yield return CoDialog(SharedModel.StageID);
+            }
+            GoToMain();
+            AnalyticsManager.Instance.BattleLeave();
+        }
+
+        private IEnumerator OnClickSubmit()
+        {
+            if (_IsAlreadyOut)
+            {
+                yield break;
+            }
+
+            AudioController.PlayClick();
+            yield return CoRepeatCurrentOrProceedNextStage();
+            AnalyticsManager.Instance.OnEvent(AnalyticsManager.EventName
+                .ClickBattleResultNext);
+        }
+
+        private IEnumerator CoDialog(int worldStage)
+        {
+            var stageDialogs = Game.Game.instance.TableSheets.StageDialogSheet.Values
+                .Where(i => i.StageId == worldStage)
+                .OrderBy(i => i.DialogId)
+                .ToArray();
+            if (!stageDialogs.Any())
+            {
+                yield break;
+            }
+
+            var dialog = Widget.Find<Dialog>();
+
+            foreach (var stageDialog in stageDialogs)
+            {
+                dialog.Show(stageDialog.DialogId);
+                yield return new WaitWhile(() => dialog.gameObject.activeSelf);
+            }
+        }
+
         public void Show(Model model)
         {
             canvasGroup.alpha = 1f;
+            canvasGroup.blocksRaycasts = true;
             SharedModel = model;
+            _IsAlreadyOut = false;
 
             worldStageId.text = $"{SharedModel.WorldName} {StageInformation.GetStageIdString(SharedModel.StageID)}";
             actionPoint.SetActionPoint(model.ActionPoint);
@@ -408,7 +453,7 @@ namespace Nekoyume.UI
             }
             else
             {
-                StartCoroutine(CoRepeatCurrentOrProceedNextStage());
+                StartCoroutine(OnClickSubmit());
             }
         }
 
@@ -432,12 +477,14 @@ namespace Nekoyume.UI
             StartCoroutine(CoFadeOut());
             var stage = Game.Game.instance.Stage;
             var stageLoadingScreen = Find<StageLoadingScreen>();
-            stageLoadingScreen.Show(stage.zone, SharedModel.WorldName, isNext ? SharedModel.StageID + 1: SharedModel.StageID);
+            stageLoadingScreen.Show(stage.zone,
+                SharedModel.WorldName,
+                isNext ? SharedModel.StageID + 1: SharedModel.StageID,
+                isNext, SharedModel.StageID);
             Find<Status>().Close();
 
             StopVFX();
-
-            var player = stage.RunPlayer(stage.selectedPlayer.transform.position);
+            var player = stage.RunPlayerForNextStage();
             player.DisableHUD();
 
             var worldId = stage.worldId;
@@ -538,6 +585,7 @@ namespace Nekoyume.UI
             }
 
             canvasGroup.alpha = 0f;
+            canvasGroup.blocksRaycasts = false;
         }
 
         private void StopVFX()
