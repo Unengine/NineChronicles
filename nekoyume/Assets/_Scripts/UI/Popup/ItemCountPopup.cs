@@ -35,17 +35,27 @@ namespace Nekoyume.UI
         {
             base.Awake();
 
-            cancelButtonText.text = L10nManager.Localize("UI_CANCEL");
+            if (cancelButtonText != null)
+            {
+                cancelButtonText.text = L10nManager.Localize("UI_CANCEL");
+            }
             submitButton.SetSubmitText(L10nManager.Localize("UI_OK"));
-            informationText.text = L10nManager.Localize("UI_RETRIEVE_INFO");
+            if (informationText != null)
+            {
+                informationText.text = L10nManager.Localize("UI_RETRIEVE_INFO");
+            }
 
-            cancelButton.OnClickAsObservable()
-                .Subscribe(_ =>
-                {
-                    _data?.OnClickCancel.OnNext(_data);
-                    AudioController.PlayCancel();
-                })
-                .AddTo(_disposablesForAwake);
+            if (cancelButton != null)
+            {
+                cancelButton.OnClickAsObservable()
+                    .Subscribe(_ =>
+                    {
+                        _data?.OnClickCancel.OnNext(_data);
+                        AudioController.PlayCancel();
+                    })
+                    .AddTo(_disposablesForAwake);
+                CloseWidget = cancelButton.onClick.Invoke;
+            }
 
             submitButton.OnSubmitClick
                 .Subscribe(_ =>
@@ -55,7 +65,6 @@ namespace Nekoyume.UI
                 })
                 .AddTo(_disposablesForAwake);
 
-            CloseWidget = cancelButton.onClick.Invoke;
             SubmitWidget = () => submitButton.OnSubmitClick.OnNext(submitButton);
         }
 
@@ -95,7 +104,13 @@ namespace Nekoyume.UI
                 .AddTo(_disposablesForSetData);
             _data.Submittable.Subscribe(value => submitButton.SetSubmittable(value))
                 .AddTo(_disposablesForSetData);
-            _data.InfoText.Subscribe(value => informationText.text = value)
+            _data.InfoText.Subscribe(value =>
+                {
+                    if (informationText != null)
+                    {
+                        informationText.text = value;
+                    }
+                })
                 .AddTo(_disposablesForSetData);
             itemView.SetData(_data.Item.Value);
         }
