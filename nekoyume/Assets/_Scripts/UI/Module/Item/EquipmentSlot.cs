@@ -182,6 +182,15 @@ namespace Nekoyume.UI.Module
             Action<EquipmentSlot> onClick,
             Action<EquipmentSlot> onDoubleClick)
         {
+            if (itemBase is null)
+            {
+                Clear();
+
+                _onClick = onClick;
+                _onDoubleClick = onDoubleClick;
+                return;
+            }
+
             var sprite = itemBase.GetIconSprite();
             if (defaultImage)
             {
