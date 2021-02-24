@@ -37,6 +37,7 @@ namespace Nekoyume.BlockChain
             Buy();
             Sell();
             SellCancellation();
+            DailyReward();
             ItemEnhancement();
         }
 
@@ -101,6 +102,15 @@ namespace Nekoyume.BlockChain
                 .Where(ValidateEvaluationForCurrentAgent)
                 .ObserveOnMainThread()
                 .Subscribe(ResponseUnrenderItemEnhancement)
+                .AddTo(_disposables);
+        }
+
+        private void DailyReward()
+        {
+            _renderer.EveryUnrender<DailyReward>()
+                .Where(ValidateEvaluationForCurrentAgent)
+                .ObserveOnMainThread()
+                .Subscribe(ResponseDailyReward)
                 .AddTo(_disposables);
         }
 
@@ -179,6 +189,23 @@ namespace Nekoyume.BlockChain
 
             LocalLayerModifier.AddItem(avatarAddress, itemId);
             UpdateCurrentAvatarState(eval);
+        }
+
+        private void ResponseDailyReward(ActionBase.ActionEvaluation<DailyReward> eval)
+        {
+            if (!(eval.Exception is null))
+            {
+                return;
+            }
+
+            var avatarAddress = eval.Action.avatarAddress;
+            var itemId = eval.Action.dailyRewardResult.materials.First().Key.ItemId;
+            var itemCount = eval.Action.dailyRewardResult.materials.First().Value;
+
+            LocalLayerModifier.AddItem(avatarAddress, itemId, itemCount);
+            UpdateCurrentAvatarState(eval);
+
+            WidgetHandler.Instance.Menu.SetActiveActionPointLoading(true);
         }
 
         private void ResponseUnrenderItemEnhancement(ActionBase.ActionEvaluation<ItemEnhancement5> eval)
