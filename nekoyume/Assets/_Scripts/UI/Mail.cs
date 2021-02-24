@@ -361,7 +361,7 @@ namespace Nekoyume.UI
             var material = materials.First();
 
             var model = new UI.Model.ItemCountConfirmPopup();
-            model.TitleText.Value = L10nManager.Localize("UI_REWARDS");
+            model.TitleText.Value = L10nManager.Localize("UI_DAILY_REWARD_POPUP_TITLE");
             model.Item.Value = new CountEditableItem(material.Key, material.Value, material.Value, material.Value);
             model.OnClickSubmit.Subscribe(_ =>
             {
