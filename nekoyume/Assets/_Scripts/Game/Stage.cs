@@ -28,6 +28,8 @@ using UniRx;
 using mixpanel;
 using Nekoyume.Game.Character;
 using Nekoyume.L10n;
+using UnityEngine.Rendering;
+using Player = Nekoyume.Game.Character.Player;
 
 namespace Nekoyume.Game
 {
@@ -72,7 +74,7 @@ namespace Nekoyume.Game
         public SkillController SkillController { get; private set; }
         public BuffController BuffController { get; private set; }
         public TutorialController TutorialController { get; private set; }
-        public bool IsInStage { get; private set; }
+        public bool IsInStage { get; set; }
         public Model.Enemy Boss { get; private set; }
         public AvatarState AvatarState { get; set; }
 
@@ -85,6 +87,7 @@ namespace Nekoyume.Game
         public bool showLoadingScreen;
 
         private Character.Player _stageRunningPlayer = null;
+        private Vector3 _playerPosition;
 
         private List<int> prevFood;
 
@@ -126,8 +129,6 @@ namespace Nekoyume.Game
             SkillController = new SkillController(objectPool);
             BuffController = new BuffController(objectPool);
             TutorialController = new TutorialController(MainCanvas.instance.Widgets);
-            var messageCatManager = Widget.Find<MessageCatManager>();
-            WidgetHandler.Instance.messageCatManager = messageCatManager;
         }
 
         private void OnStageStart(BattleLog log)
@@ -231,6 +232,7 @@ namespace Nekoyume.Game
         {
             showLoadingScreen = showScreen;
             gameObject.AddComponent<RoomEntering>();
+            IsInStage = false;
         }
 
         // todo: 배경 캐싱.
@@ -403,31 +405,10 @@ namespace Nekoyume.Game
         public void ClearBattle()
         {
             _battleLog = null;
-            IsInStage = false;
             if (!(_battleCoroutine is null))
             {
                 StopCoroutine(_battleCoroutine);
                 _battleCoroutine = null;
-            }
-        }
-
-        private static IEnumerator CoDialog(int worldStage)
-        {
-            var stageDialogs = Game.instance.TableSheets.StageDialogSheet.Values
-                .Where(i => i.StageId == worldStage)
-                .OrderBy(i => i.DialogId)
-                .ToArray();
-            if (!stageDialogs.Any())
-            {
-                yield break;
-            }
-
-            var dialog = Widget.Find<Dialog>();
-
-            foreach (var stageDialog in stageDialogs)
-            {
-                dialog.Show(stageDialog.DialogId);
-                yield return new WaitWhile(() => dialog.gameObject.activeSelf);
             }
         }
 
@@ -552,11 +533,6 @@ namespace Nekoyume.Game
             if (log.result == BattleLog.Result.Win)
             {
                 _stageRunningPlayer.DisableHUD();
-                if (isClear)
-                {
-                    yield return StartCoroutine(CoDialog(log.stageId));
-                }
-
                 _stageRunningPlayer.Animator.Win(log.clearedWaveNumber);
                 _stageRunningPlayer.ShowSpeech("PLAYER_WIN");
                 yield return new WaitForSeconds(2.2f);
@@ -1039,7 +1015,7 @@ namespace Nekoyume.Game
             var characters = GetComponentsInChildren<Character.CharacterBase>();
             yield return new WaitWhile(() => characters.Any(i => i.actions.Any()));
             var character = GetCharacter(model);
-
+            _playerPosition = selectedPlayer.transform.position;
             character.Dead();
         }
 
@@ -1099,6 +1075,18 @@ namespace Nekoyume.Game
             return player;
         }
 
+        public Player RunPlayerForNextStage()
+        {
+            if (selectedPlayer != null)
+            {
+                _playerPosition = selectedPlayer.transform.position;
+            }
+
+            var player = GetPlayer(_playerPosition);
+            RunAndChasePlayer(player);
+            return player;
+        }
+
         /// <summary>
         /// 게임 캐릭터를 갖고 올 때 사용함.
         /// 갖고 올 때 매번 모델을 할당해주고 있음.
@@ -1112,10 +1100,26 @@ namespace Nekoyume.Game
             if (caster is null)
                 throw new ArgumentNullException(nameof(caster));
 
-            var character = GetComponentsInChildren<Character.CharacterBase>()
-                .FirstOrDefault(c => c.Id == caster.Id);
-            if (!(character is null))
-                character.Set(caster);
+            var characters = GetComponentsInChildren<Character.CharacterBase>()
+                .Where(c => c.Id == caster.Id);
+            var character = characters?.FirstOrDefault();
+
+            if (!(characters is null))
+            {
+                var ch = characters.First();
+
+                if (ch is null)
+                {
+                    Debug.Log("player is null");
+                }
+                if (ch is Player)
+                {
+                    character = characters.FirstOrDefault(x =>
+                        x.GetComponent<SortingGroup>().sortingLayerName == "Character");
+                }
+            }
+            character?.Set(caster);
+
             return character;
         }
 

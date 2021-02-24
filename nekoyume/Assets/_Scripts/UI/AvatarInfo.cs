@@ -62,15 +62,11 @@ namespace Nekoyume.UI
 
         private EquipmentSlot _weaponSlot;
         private EquipmentSlot _armorSlot;
-        private bool _isShownFromMenu;
-        private bool _isShownFromBattle;
         private Player _player;
         private Vector3 _previousAvatarPosition;
         private int _previousSortingLayerID;
         private int _previousSortingLayerOrder;
         private bool _previousActivated;
-        private CharacterStats _tempStats;
-        private Coroutine _constraintsPlayerToUI;
         private Coroutine _disableCpTween;
 
         public readonly ReactiveProperty<bool> IsTweenEnd = new ReactiveProperty<bool>(true);
@@ -146,8 +142,6 @@ namespace Nekoyume.UI
         public override void Show(bool ignoreShowAnimation = false)
         {
             var currentAvatarState = Game.Game.instance.States.CurrentAvatarState;
-            _isShownFromMenu = Find<Menu>().gameObject.activeSelf;
-            _isShownFromBattle = Find<Battle>().gameObject.activeSelf;
             IsTweenEnd.Value = false;
             Show(currentAvatarState, ignoreShowAnimation);
         }
@@ -160,7 +154,7 @@ namespace Nekoyume.UI
 
         protected override void OnTweenReverseComplete()
         {
-            ReturnPlayer();
+            Game.Game.instance.Stage.objectPool.Remove<Player>(_player.gameObject);
             IsTweenEnd.Value = true;
         }
 
@@ -177,113 +171,38 @@ namespace Nekoyume.UI
             base.Show(ignoreShowAnimation);
             inventory.SharedModel.State.Value = ItemType.Equipment;
 
-            ReplacePlayer(avatarState);
+            if (_player == null)
+            {
+                CreatePlayer(avatarState);
+            }
+
             UpdateSlotView(avatarState);
             UpdateStatViews();
         }
 
-        private void ReplacePlayer(AvatarState avatarState)
+        private void CreatePlayer(AvatarState avatarState)
         {
-            if (_player is null)
-            {
-                if (_isShownFromBattle)
-                {
-                    _player = PlayerFactory
-                        .Create(avatarState)
-                        .GetComponent<Player>();
-                }
-                else
-                {
-                    var stage = Game.Game.instance.Stage;
-                    _previousActivated = stage.selectedPlayer &&
-                                         stage.selectedPlayer.gameObject.activeSelf;
-                    _player = stage.GetPlayer();
-                    _player.Set(avatarState);
-                    _previousAvatarPosition = _player.transform.position;
-                    if (_player.Costumes.Any(value => value.Id == 40100002))
-                    {
-                        _previousAvatarPosition -= new Vector3(-0.17f, -0.05f);
-                    }
-                    _previousSortingLayerID = _player.sortingGroup.sortingLayerID;
-                    _previousSortingLayerOrder = _player.sortingGroup.sortingOrder;
-                }
-            }
-
-            _player.transform.position = avatarPosition.position;
+            _player = PlayerFactory.Create(avatarState).GetComponent<Player>();
+            _player.Set(avatarState);
+            _player.transform.SetParent(avatarPosition);
+            _player.transform.localPosition = Vector3.zero;
 
             var orderInLayer = MainCanvas.instance.GetLayer(WidgetType).root.sortingOrder + 1;
             _player.SetSortingLayer(SortingLayer.NameToID("UI"), orderInLayer);
 
-            _tempStats = _player.Model.Stats.Clone() as CharacterStats;
-
-            if (!(_constraintsPlayerToUI is null))
-            {
-                StopCoroutine(_constraintsPlayerToUI);
-            }
-
-            _constraintsPlayerToUI = StartCoroutine(CoConstraintsPlayerToUI(_player.transform));
         }
 
-        private IEnumerator CoConstraintsPlayerToUI(Transform playerTransform)
+        private void UpdateUIPlayer()
         {
-            while (enabled && playerTransform)
-            {
-                playerTransform.position = avatarPosition.position;
-                yield return null;
-            }
-        }
-
-        private void ReturnPlayer()
-        {
-            if (!(_constraintsPlayerToUI is null))
-            {
-                StopCoroutine(_constraintsPlayerToUI);
-                _constraintsPlayerToUI = null;
-            }
-
-            if (_player is null)
-            {
-                return;
-            }
-
-            if (_isShownFromBattle)
-            {
-                Game.Game.instance.Stage.objectPool.Remove<Player>(_player.gameObject);
-                _player = null;
-                return;
-            }
-
-            // NOTE: AvatarInfo의 동작 방법의 문제로 아래와 같은 로직을 추가했습니다.
-            // AvatarInfo는 열리기 전의 Player의 노출 상태를 기억해서 AvatarInfo가 닫힐 때 Player의 노출 상태를 되돌립니다.
-            // 하지만 AvatarInfo를 포함하는 BottomMenu를 다시 포함하는 Widget의 닫히는 연출과 새롭게 열리는 Widget의 연출
-            // 간의 관리되지 않는 구간으로 인해서 AvatarInfo의 동작이 문제가 되는 경우가 있습니다.
-            // 이 문제를 AvatarInfo의 동작 방법을 개선해서 대응할 수 있어 보이지만, 지금은 단순하게 Menu에 대한 의존을 더하는
-            // 방법으로 해결합니다.
-            // Menu는 Game.Event.OnRoomEnter 이벤트로 열리며 이때 RoomEntering 컴포넌트에 의해서 Player도 초기화 됩니다.
-            if (!_isShownFromMenu && Find<Menu>().IsActive())
-            {
-                _player.SetSortingLayer(_previousSortingLayerID, _previousSortingLayerOrder);
-                _player = null;
-                return;
-            }
-
-            // NOTE: 플레이어를 강제로 재생성해서 플레이어의 모델이 장비 변경 상태를 반영하도록 합니다.
-            _player = Game.Game.instance.Stage.GetPlayer(_previousAvatarPosition, true);
-            if (_player.Costumes.Any(value => value.Id == 40100002))
-            {
-                _player.transform.position += new Vector3(-0.17f, -0.05f);
-            }
             var currentAvatarState = Game.Game.instance.States.CurrentAvatarState;
             _player.Set(currentAvatarState);
-            _player.SetSortingLayer(_previousSortingLayerID, _previousSortingLayerOrder);
-            _player.gameObject.SetActive(_previousActivated);
-            _player = null;
         }
 
         private void UpdateSlotView(AvatarState avatarState)
         {
             var game = Game.Game.instance;
-            var playerModel = game.Stage.GetPlayer().Model;
+            // var playerModel = game.Stage.GetPlayer().Model;
+            var playerModel = _player.Model;
 
             nicknameText.text = string.Format(
                 NicknameTextFormat,
@@ -319,6 +238,8 @@ namespace Nekoyume.UI
                 cpText.text = CPHelper.GetCPV2(avatarState, game.TableSheets.CharacterSheet, game.TableSheets.CostumeStatSheet)
                     .ToString();
             }
+
+            UpdateUIPlayer();
         }
 
         private void UpdateStatViews()
@@ -345,15 +266,18 @@ namespace Nekoyume.UI
                 );
             }
 
-            var stats = _tempStats.SetAll(
-                _tempStats.Level,
+            var currentAvatarState = Game.Game.instance.States.CurrentAvatarState;
+            _player.Set(currentAvatarState);
+
+            var stats = _player.Model.Stats.SetAll(
+                _player.Model.Stats.Level,
                 equipments,
                 null,
                 Game.Game.instance.TableSheets.EquipmentItemSetEffectSheet
             );
             stats.SetOption(statModifiers);
-
             avatarStats.SetData(stats);
+            UpdateUIPlayer();
         }
 
         #region Subscribe
@@ -369,7 +293,7 @@ namespace Nekoyume.UI
 
         private void Equip(CountableItem countableItem)
         {
-            if (_isShownFromBattle ||
+            if (Game.Game.instance.Stage.IsInStage ||
                 !(countableItem is InventoryItem inventoryItem))
             {
                 return;
@@ -472,7 +396,7 @@ namespace Nekoyume.UI
 
         private void Unequip(EquipmentSlot slot, bool considerInventoryOnly)
         {
-            if (_isShownFromBattle)
+            if (Game.Game.instance.Stage.IsInStage)
             {
                 return;
             }
@@ -716,17 +640,17 @@ namespace Nekoyume.UI
 
             return States.Instance.CurrentAvatarState.actionPoint !=
                    States.Instance.GameConfigState.ActionPointMax
-                   && !_isShownFromBattle;
+                   && !Game.Game.instance.Stage.IsInStage;
         }
 
         private bool DimmedFuncForChest(CountableItem item)
         {
-            return !(item is null) && item.Count.Value >= 1 && !_isShownFromBattle;
+            return !(item is null) && item.Count.Value >= 1 && !Game.Game.instance.Stage.IsInStage;
         }
 
         private bool DimmedFuncForEquipments(CountableItem item)
         {
-            return !item.Dimmed.Value && !_isShownFromBattle;
+            return !item.Dimmed.Value && !Game.Game.instance.Stage.IsInStage;
         }
 
         private static void ChargeActionPoint(CountableItem item)

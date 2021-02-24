@@ -2,15 +2,19 @@ using Nekoyume.UI.Module;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Nekoyume.EnumType;
 using Nekoyume.L10n;
+using Nekoyume.State;
 using UnityEngine;
 using UnityEngine.U2D;
 using UnityEngine.UI;
 
 namespace Nekoyume.UI
 {
-    public class StageLoadingScreen : ScreenWidget
+    public class StageLoadingScreen : Widget
     {
+        public override WidgetType WidgetType => WidgetType.Widget;
+
         private const string SpriteAtlasPathFormat = "SpriteAtlases/Background/{0}";
         private const string SpriteNameFormat01 = "{0}_01";
         private const string SpriteNameFormat02 = "{0}_02";
@@ -18,10 +22,18 @@ namespace Nekoyume.UI
 
         public List<Image> images;
         public bool closeEnd;
+        public bool dialogEnd;
         public LoadingIndicator indicator;
 
         private bool _shouldClose;
         private List<RectTransform> _rects;
+
+        protected override void Awake()
+        {
+            base.Awake();
+
+            CloseWidget = null;
+        }
 
         private static Sprite GetSprite(string background, string spriteNameFormat)
         {
@@ -54,8 +66,9 @@ namespace Nekoyume.UI
             return spriteAtlas;
         }
 
-        public void Show(string background, string worldName, int stageId)
+        public void Show(string background, string worldName, int stageId, bool isNext, int clearedStageId)
         {
+
             _shouldClose = false;
             _rects = new List<RectTransform>();
             var position = new Vector2(MainCanvas.instance.RectTransform.rect.width, 0f);
@@ -72,12 +85,55 @@ namespace Nekoyume.UI
                 position.x += ImageMargin;
                 _rects.Add(rect);
             }
+
+            base.Show();
+            StartCoroutine(ShowSequence(worldName, stageId, isNext, clearedStageId));
+            StartCoroutine(CoRun());
+        }
+
+        private IEnumerator ShowSequence(string worldName, int stageId, bool isNext, int clearedStageId)
+        {
+            indicator.Close();
+            dialogEnd = true;
+            if (isNext)
+            {
+                yield return CoDialog(clearedStageId);
+            }
+
             var message = string.Format(L10nManager.Localize("STAGE_BLOCK_CHAIN_MINING_TX"),
                 worldName,
                 StageInformation.GetStageIdString(stageId));
             indicator.Show(message);
-            base.Show();
-            StartCoroutine(CoRun());
+
+            if (States.Instance.CurrentAvatarState.worldInformation
+                    .TryGetUnlockedWorldByStageClearedBlockIndex(out var world) &&
+                world.StageClearedId >= GameConfig.RequireClearedStageLevel.UIBottomMenuInBattle)
+            {
+                WidgetHandler.Instance.Battle.ShowBottomMenu(world, false);
+            }
+        }
+
+        private IEnumerator CoDialog(int worldStage)
+        {
+            dialogEnd = false;
+            var stageDialogs = Game.Game.instance.TableSheets.StageDialogSheet.Values
+                .Where(i => i.StageId == worldStage)
+                .OrderBy(i => i.DialogId)
+                .ToArray();
+            if (!stageDialogs.Any())
+            {
+                dialogEnd = true;
+                yield break;
+            }
+
+            var dialog = Widget.Find<Dialog>();
+            foreach (var stageDialog in stageDialogs)
+            {
+                dialog.Show(stageDialog.DialogId);
+                yield return new WaitWhile(() => dialog.gameObject.activeSelf);
+            }
+
+            dialogEnd = true;
         }
 
         public override IEnumerator CoClose()
@@ -116,7 +172,7 @@ namespace Nekoyume.UI
                     }
                 }
 
-                closeEnd = images.All(i => i.gameObject.activeSelf == false);
+                closeEnd = images.All(i => i.gameObject.activeSelf == false) && dialogEnd;
                 if (closeEnd) break;
                 yield return null;
             }

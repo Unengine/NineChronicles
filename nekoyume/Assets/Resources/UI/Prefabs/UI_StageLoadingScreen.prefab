@@ -245,11 +245,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ba779bf8c6422b89150b81029903a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorialTargets: []
+  tutorialActions: 
   images:
   - {fileID: 4793340055622355258}
   - {fileID: 4793340054402964612}
   - {fileID: 4743312975964689420}
   closeEnd: 0
+  dialogEnd: 0
   indicator: {fileID: 6304563791762987637}
 --- !u!1 &4793340055622355260
 GameObject:
@@ -337,6 +340,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LoadingIndicator
       objectReference: {fileID: 0}
+    - target: {fileID: 645181910402810980, guid: 1a0b987d9e902134fa44625a2541ac08,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 246696151481537243, guid: 1a0b987d9e902134fa44625a2541ac08,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -405,7 +413,7 @@ PrefabInstance:
     - target: {fileID: 246696151481537243, guid: 1a0b987d9e902134fa44625a2541ac08,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 83.84
       objectReference: {fileID: 0}
     - target: {fileID: 246696151481537243, guid: 1a0b987d9e902134fa44625a2541ac08,
         type: 3}
