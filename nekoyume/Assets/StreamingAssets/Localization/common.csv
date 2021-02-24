@@ -9,26 +9,26 @@ EXCHANGE,Exchange,거래,Trocar,,交換,Tauschen,Intercambio,แลกเปล�
 OBTAIN,Obtain,획득,Obter,,入手,Erhalten,Obtener,ได้รับ,Uzyskać,,,Mendapatkan,Obtenir,,ទទួលបាន,,获取,,,,,,,,,,,,,,,,,,,
 SYSTEM,System,시스템,Sistema,,システム,System,Sistema,ระบบ,System,,,Sistem,Système,,,,系统,,,,,,,,,,,,,,,,,,,
 SPEECH_SHOP_0,"Did you craft something nice?
-Come and put it up for sale!","괜찮은 물건을 제작했어? 
-그럼 여기 와서 팔아봐","Você fez algo legal? 
+Come and put it up for sale!","괜찮은 물건을 제작했어?
+그럼 여기 와서 팔아봐","Você fez algo legal?
 Venha e venda!",,"良いものが作れたら
 いつでも売りに来てね！","Hast du etwas Schönes hergestellt?
 Komm und verkauf es!",¿Creaste algo bueno? ¡Ven y vendelo!,"คุณสร้างอะไรเจ๋งๆบ้าง?
 เอามาขายได้เลย!","Zrobiłeś coś dobrego?
 Przyjdź i to sprzedaj!",,,"Apakah kamu membuat sesuatu yang bagus ?
 kemari dan jual disini !","Est-ce que tu as fabriqué quelque chose de bien ?
-Viens le mettre en vente !",,"តើអ្នកបានធ្វើឱ្យអ្វីដែលស្រស់ស្អាត? 
+Viens le mettre en vente !",,"តើអ្នកបានធ្វើឱ្យអ្វីដែលស្រស់ស្អាត?
 មកលក់វាមក!",,您制作了精美的东西吗？来把它出售！,,,,,,,,,,,,,,,,,,,
 SPEECH_SHOP_1,"There's a lot of
 good stuff on sale.
-Come have a look!","좋은 물건이 많이 올라와있어! 
-시간 나면 보고 가","Tem um monte 
+Come have a look!","좋은 물건이 많이 올라와있어!
+시간 나면 보고 가","Tem um monte
 de coisa nova chegando!",,"掘り出し物が
 続々と入荷中よ！",Es stehen viele gute Dinge an.,Hay un monton de magnificos objetos en camino.,"ยังมีของดีอีกเพียบ
 ที่กำลังจะมา","Nadchodzi wiele
 dobrych rzeczy.",,,Akan ada banyak barang bagus datang.,"Il y a plein de
 bons trucs en vente.
-Viens jeter un coup d’œil.",,"មានច្រើនណាស់ 
+Viens jeter un coup d’œil.",,"មានច្រើនណាស់
 របស់ល្អ ៗ មកដល់ហើយ។",,会有很多好东西出现。,,,,,,,,,,,,,,,,,,,
 SPEECH_SHOP_2,"If you are unsure about your item's price,
 check out how much other people
@@ -53,10 +53,10 @@ les vendent.",,"ប្រសិនបើអ្នកមិនច្បាស់�
 ពិនិត្យមេីលថាអ្នកដទៃលក់ក្នុងតម្លៃប៉ុន្មាន។",,"如果不确定关于您物品的价格，
 请查看有多少其他人正在出售它们。",,,,,,,,,,,,,,,,,,,
 SPEECH_SHOP_3,"You can always retrieve items
-that are unsold.","아직 팔리지 않은 물건은 
-언제든지 다시 회수할 수 있어","Você pode sempre recuperar itens 
+that are unsold.","아직 팔리지 않은 물건은
+언제든지 다시 회수할 수 있어","Você pode sempre recuperar itens
 que não foram vendidos",,"出品中の商品は
-いつでもキャンセルできるわ。","Du kannst Gegenstände, die nicht 
+いつでもキャンセルできるわ。","Du kannst Gegenstände, die nicht
 verkauft wurden, immer zurückholen.",Siempre puedes recuperar los objetos que no se han vendido.,"คุุณสามารถเอาของคืนได้ตลอดเวลา
 ถ้ายังขายไม่ออก","Zawsze można odzyskać przedmioty
 które nie zostały sprzedane.",,,Kamu dapat mengambil kembali barang yang belum terjual.,"Tu peux toujours reprendre les articles
@@ -76,14 +76,14 @@ in diese Welt bringen..?",¿Cuantos gatos quiere Freya traer al mundo?,"จะ�
 Freya chce wnieść
 Do świata..?",,,Berapa banyak kucing yang freya mau datangkan ke dunia ini ?,"Combien de chats
 Freya veut transporter
-dans ce monde... ?",,"តើសត្វឆ្មាប៉ុន្មានក្បាល 
-Freya ចង់ដឹកជញ្ជូន 
+dans ce monde... ?",,"តើសត្វឆ្មាប៉ុន្មានក្បាល
+Freya ចង់ដឹកជញ្ជូន
 ដល់ពិភពលោកនេះ .. ?",,芙蕾雅想要运送多少只猫到这个世界上。,,,,,,,,,,,,,,,,,,,
 SPEECH_SHOP_5,"Unidentified creatures
 from Yggdrasil have
-engulfed the whole world.","세계수에서 생겨난 정체불명의 
-생명체들이 온 세계를 뒤덮고 말았어..","Criaturas não identificadas 
-de Igdrasil 
+engulfed the whole world.","세계수에서 생겨난 정체불명의
+생명체들이 온 세계를 뒤덮고 말았어..","Criaturas não identificadas
+de Igdrasil
 engoliram o mundo inteiro.",,"ユグドラシルから生まれた見たことない生物たちが
 世界を覆いつくしてしまったの。","Unbekannte Kreaturen
 von Igdrasil haben
@@ -93,11 +93,11 @@ die ganze Welt eingehüllt.",Criaturas no identificadas de Igdrasil han engullid
 z Ygdrasill podbiły cały świat.",,,"Mahkluk asing dari yggdrasil
 telah melanda seluruh dunia.","Des créatures non-identifiées
 provenant de Yggdrasil ont
-envahi le monde entier.",,"សត្វមិនស្គាល់អត្តសញ្ញាណ 
-ពី Yggdrasil មាន 
+envahi le monde entier.",,"សត្វមិនស្គាល់អត្តសញ្ញាណ
+ពី Yggdrasil មាន
 បានឡោមព័ទ្ធពិភពលោកទាំងមូល។",,来自伊格德拉西尔的身份不明的生物吞没了整个世界。,,,,,,,,,,,,,,,,,,,
 SPEECH_SHOP_6,"You need a variety of equipment
-to prepare for the ordeal.",다양한 장비가 있어야 시련을 대비할 수 있어,"Você precisa de uma variedade de equipamentos 
+to prepare for the ordeal.",다양한 장비가 있어야 시련을 대비할 수 있어,"Você precisa de uma variedade de equipamentos
 para se preparar para a provação.",,厳しい戦いに備えて色々な装備が必要よ！,"Du brauchst eine Vielfalt von Ausrüstung,
 um die auf die Probe vorzubereiten",Necesitas una gran variedad de equipamiento para prepararte para la adversidad.,"คุณต้องมีอุปกรณ์ที่หลากหลาย
 เพื่อเตรียมพร้อมสำหรับการทดสอบ","Potrzebujesz zróżnicowanego
@@ -106,9 +106,9 @@ untuk menghadapi cobaan itu.","Tu vas avoir besoin d'équipements variés
 pour te préparer à faire face à cette épreuve.",,"អ្នកត្រូវការឧបករណ៍ជាច្រើនប្រភេទ
 ដើម្បីរៀបចំសម្រាប់ការតេស្តនេះ។",,为您准备好各种装备以备不时之需。,,,,,,,,,,,,,,,,,,,
 SPEECH_COMBINE_0,"Have you collected the materials?
-Then come to me.","전투로 재료를 모았나? 
-그럼 내게 오시게","Você coletou 
-os materiais? 
+Then come to me.","전투로 재료를 모았나?
+그럼 내게 오시게","Você coletou
+os materiais?
 Então venha até mim.",,"素材を集めたら
 オレのところに来な！","Hast du die Materialien eingesammelt?
 Dann komm zu mir.",¿Obtuviste los materiales? Entonces ven conmigo.,"คุณรวบรวม
@@ -116,17 +116,17 @@ Dann komm zu mir.",¿Obtuviste los materiales? Entonces ven conmigo.,"คุณ�
 ถ้าอย่างนั้นมาหาเรา","Zebrałeś już materiały?
 Jeśli tak to przyjdź do mnie.",,,"Apakah kamu sudah mengumpulkan bahan yang dibutuhkan ?
 kemari kesini.","As-tu collecté les matériaux ?
-Alors, viens me voir.",,"តើអ្នកបានប្រមូលសំភារៈហើយឬនៅ? 
+Alors, viens me voir.",,"តើអ្នកបានប្រមូលសំភារៈហើយឬនៅ?
 បន្ទាប់មកមករកខ្ញុំ។",,您是否已收集材料？然后找我。,,,,,,,,,,,,,,,,,,,
-SPEECH_COMBINE_1,I'll do my absolute best on this one.,"최선을 다해 
+SPEECH_COMBINE_1,I'll do my absolute best on this one.,"최선을 다해
 무기를 만들어주지",Eu farei o meu melhor trabalho neste item.,,最高の仕事をしてやるぜ！,Dieses Mal werde ich mein Bestes geben.,Hare mi mejor trabajo con este.,ฉันจะทำงานชิ้นนี้ออกมาให้ดีที่สุด,Zrobie wszystko co w mojej mocy.,,,Saya akan berusaha sebaik mungkin untuk ini.,Je vais faire de mon mieux pour celui-là.,,ខ្ញុំនឹងធ្វើឱ្យអស់ពីសមត្ថភាពរបស់ខ្ញុំលើរឿងមួយនេះ។,,我会尽力做到这一点。,,,,,,,,,,,,,,,,,,,
 SPEECH_COMBINE_2,"You want to build
 a stronger weapon?
 Gather more materials
 for the desired effect.","더 강한 무기를 만들고 싶다고?
-원하는 효과의 재료를 많이 모으게","Você quer construir 
-uma arma mais forte? 
-Reúna mais materiais 
+원하는 효과의 재료를 많이 모으게","Você quer construir
+uma arma mais forte?
+Reúna mais materiais
 para o efeito desejado.",,"強い武器が欲しいか？
 望みの効果を付けたけりゃもっと素材を集めな！","Du willst eine stärkere
 Waffe anfertigen?
@@ -141,15 +141,15 @@ aby uzyskać pożądany efekt.",,,"Apakah kamu mau membuat senjata yang lebih ku
 Kumpulkan lebih banyak bahan untuk mendapatkan efek yang diinginkan.","Tu veux fabriquer
 une arme plus puissante ?
 Collecte plus de matériaux
-pour obtenir l'effet désiré.",,"អ្នកចង់សាងសង់ 
-អាវុធដែលខ្លាំងជាងនេះ? 
-ប្រមូលសម្ភារៈបន្ថែម 
+pour obtenir l'effet désiré.",,"អ្នកចង់សាងសង់
+អាវុធដែលខ្លាំងជាងនេះ?
+ប្រមូលសម្ភារៈបន្ថែម
 សម្រាប់ប្រសិទ្ធិភាពដែលចង់បាន។",,"您想要制造更坚固的武器吗？
 请收集更多材料以达到理想的效果。
 您知道这个世界上有四种元素的事实吗？",,,,,,,,,,,,,,,,,,,
 SPEECH_COMBINE_3,"Do you know the fact that
-there are four elements in this world?","속성이 있다는 
-사실을 알고 있나?","Você conhece o fato de que 
+there are four elements in this world?","속성이 있다는
+사실을 알고 있나?","Você conhece o fato de que
 existem quatro elementais no mundo?",,"知ってるか？
 この世界には四大元素ってものがあるんだ","Wusstest du schon, dass es in
 dieser Welt vier Elementargeister gibt?",¿Sabes que hay cuatro materiales en el mundo?,"คุณรู้ไหมว่าจริงๆแล้ว
@@ -157,10 +157,10 @@ dieser Welt vier Elementargeister gibt?",¿Sabes que hay cuatro materiales en el
 quatre éléments dans ce monde ?",,តើអ្នកដឹងទេថាមានធាតុបួននៅក្នុងពិភពលោកនេះ?,,您知道这个世界上有四种元素吗？,,,,,,,,,,,,,,,,,,,
 SPEECH_COMBINE_4,"Don't be too upset.
 Have you ever heard of
-consumable items?","속성무기를 못 만든다고 
-너무 상심하지 말게. 
-소모템이라고 들어보았나?","Não fique muito chateado. 
-você já ouviu falar de 
+consumable items?","속성무기를 못 만든다고
+너무 상심하지 말게.
+소모템이라고 들어보았나?","Não fique muito chateado.
+você já ouviu falar de
 um item consumível?",,"そう心配するな
 消耗品のことは知ってるか？","Sei nicht bestürzt.
 Hast du schon einmal von
@@ -169,7 +169,7 @@ Verbrauchgegenständen gehört?",No estes triste. ¿Alguna vez escuchaste de art
 Czy kiedykolwiek słyszałeś o przedmiotach użytkowych?",,,"Jangan marah
 Pernahkah kamu mendengar barang konsumsi","Ne sois pas trop contrarié.
 As-tu entendu parler
-des consommables ?",,"កុំតូចចិត្ត 
+des consommables ?",,"កុំតូចចិត្ត
 តើអ្នកធ្លាប់លឺអំពីរបស់ដែលអាចប្រើប្រាស់បានទេ?",,不要太沮丧吗？您听说过消耗品吗？,,,,,,,,,,,,,,,,,,,
 SPEECH_COMBINE_5,"A consumable item disappears
 upon usage,
@@ -192,7 +192,7 @@ mais son effet est puissant.",,"របស់ដែលអាចប្រេីប
 但是效果很强大。",,,,,,,,,,,,,,,,,,,
 SPEECH_COMBINE_6,"You want to further strengthen your weapon?
 Craft the same weapon and synthesize it.","무기를 더 강화하고 싶다고?
-같은 무기를 만들어서 합성해보게","Você quer mais armas? 
+같은 무기를 만들어서 합성해보게","Você quer mais armas?
 nova linha Faça uma arma e sintetize-a.",,"もっと強い武器が欲しいのか？
 同じ武器を作って合成してみろ","Möchtest du deine Waffe weiter verstärken?
 Kombiniere dazu zwei Exemplare des selben Waffe.",¿Quieres mas armas? Fabrica un arma y sintetízala.,"คุณต้องการอาวุธเพิ่ม?
@@ -202,8 +202,8 @@ Confectionne-la en double et combine-les.",,អ្នកចង់ពង្រឹ
 制造相同的武器并合成它。",,,,,,,,,,,,,,,,,,,
 SPEECH_COMBINE_7,"The higher the grade,
 the more options there will be…
-What? You're already aware of that? Whoo!","높은 등급의 무기일수록 
-많은 옵션이 붙지.. 
+What? You're already aware of that? Whoo!","높은 등급의 무기일수록
+많은 옵션이 붙지..
 뭐? 그것까지 알려줄 필욘 없다고? 흥!","Quanto maior a graduação.
 mais opções existem ...
 O que? Mas você já sabe disso. Uau!",,"グレードが上がると追加効果も増えるんだが…
@@ -221,27 +221,27 @@ Quoi ? Tu es déjà au courant de tout ça ? Ouah !",,"ថ្នាក់ខ្�
 អ្វី? អ្នកបានដឹងរួចទៅហើយ? អូ!",,"等级越高，会有更多的选择……什么？
 您已经知道了吗？喔！",,,,,,,,,,,,,,,,,,,
 SPEECH_COMBINE_8,"They say there's a huge pig
-that won't die..","죽어도 죽지 않는 
-돼지가 있다고 하더군..","Dizem que há um porco enorme 
+that won't die..","죽어도 죽지 않는
+돼지가 있다고 하더군..","Dizem que há um porco enorme
 que não morre ..",,"聞いた話だが
 どこかに死なない巨大な豚がいるらしいぞ","Es wird gesagt, dass es ein riesiges Schwein gibt,
 welches nicht sterben will.",Dicen que hay un enorme cerdo inmortal...,"มีคนบอกว่ามีหมูตัวใหญ่
 ที่ไม่ตาย...","Mówią że gdzieś tam jes wielka świnia,
 która zwyczajnie nie chce umrzeć..",,,"Mereka mengatakan ada babi yang sangat besar
 yang tidak bisa mati...","Ils disent qu'il y a un cochon énorme
-qui ne veut pas mourir...",,"ពួកគេនិយាយថាមានជ្រូកដ៏ធំមួយ 
+qui ne veut pas mourir...",,"ពួកគេនិយាយថាមានជ្រូកដ៏ធំមួយ
 ដែលមិនស្លាប់ ។.",,他们说有一头不会死的大猪。.,,,,,,,,,,,,,,,,,,,
 SPEECH_RANK_0,"Put your name
 on the Hall of Fame!","영예의 전당에
-이름을 올려라!","Coloque seu nome 
+이름을 올려라!","Coloque seu nome
 no Hall da Fama!",,栄えある殿堂に名を連ねよ！,Trage deinen Namen in die Hall of Fame ein!,¡Pon tu nombre en el salón de la fama!,"ใส่ชื่อคุณ
 บนหอเกียรติยศ!","Zapisz swoje imie
 w galerii sław!",,,"Masukan namamu
 di Hall of Fame!","Mets ton nom
-dans le Hall de la Gloire !",,"ដាក់ឈ្មោះរបស់អ្នក 
+dans le Hall de la Gloire !",,"ដាក់ឈ្មោះរបស់អ្នក
 នៅលើសាលកិត្តិនាម!",,在名人堂里放上你的名字！,,,,,,,,,,,,,,,,,,,
 SPEECH_RANK_1,"To prepare for war
-you have to be stronger!","전쟁에 대비하려면 
+you have to be stronger!","전쟁에 대비하려면
 더욱 강해져야 한다!","Para se preparar para a guerra
 você precisa ser mais forte!",,"戦いに備えるには
 強くなることだ！","Um dich auf den Krieg vorzubereiten,
@@ -249,24 +249,24 @@ musst du stark sein.",¡Para estar preparado para la guerra tienes que ser mas f
 คุณจะต้องแข็งแกร่งยิ่งขึ้น!","Aby być gotowym na wojnę
 musisz być znacznie silniejszy!",,,"Untuk persiapan perang
 kamu harus lebih kuat!","Pour te préparer pour la guerre,
-tu dois être plus fort !",,"ដើម្បីត្រៀមខ្លួនសម្រាប់សង្គ្រាម 
+tu dois être plus fort !",,"ដើម្បីត្រៀមខ្លួនសម្រាប់សង្គ្រាម
 អ្នកត្រូវតែរឹងមាំ!",,为战争做准备，你必须变得更强！,,,,,,,,,,,,,,,,,,,
 SPEECH_RANK_2,"You haven't been
 in the rankings yet?
 Hmm.. It's quite difficult.","아직 랭킹에 올라본 적이 없다고?
-흠.. 곤란하군..","Você ainda não foi 
-no ranking? 
+흠.. 곤란하군..","Você ainda não foi
+no ranking?
 Hmm .. Estou em apuros.",,"まだランキングに載ったことがないのか？
 うーむ…困ったな…","Du warst noch nicht
 in der Rangliste?
 Hmm.. es ist relativ schwierig.",¿No te has clasificado todavia? Hmm.. Estoy en problemas.,"คุณยังไม่เคยติดอันดับ?
-อืม.. เราแย่แน่ๆ","Nie zajmujesz 
+อืม.. เราแย่แน่ๆ","Nie zajmujesz
 żadnego miejsca w rankingu?
 Hmm.. nie będzie łatwo.",,,"Kamu masih belum terdaftar di ranking?
 Hmmm... ini akan sedikit susah.","Tu n'es pas encore entré
 dans le classement ?
-Hmm... C'est très difficile.",,"អ្នកមិនបាន 
-នៅក្នុងចំណាត់ថ្នាក់នៅឡើយទេ? 
+Hmm... C'est très difficile.",,"អ្នកមិនបាន
+នៅក្នុងចំណាត់ថ្នាក់នៅឡើយទេ?
 ហឹម .. វាពិតជាលំបាកណាស់។",,"你还没有进入排名？嗯。。。
 这个是有一点难度。",,,,,,,,,,,,,,,,,,,
 SPEECH_RANK_3,"For the glorious cats,
@@ -284,8 +284,8 @@ SPEECH_RANK_4,"If Odin hadn't let go of
 Loki's children like that..
 Oh! Nevermind!","오딘님이 로키님의 자식들을
 그렇게 내치지만 않았어도..
-앗 아무것도 아니다!","Se Odin não tivesse abandonado os filhos de 
-Rocky assim ... 
+앗 아무것도 아니다!","Se Odin não tivesse abandonado os filhos de
+Rocky assim ...
 Oh! Não é nada.",,"オーディン様がロキの子を追放などしなければ…
 あぁ…何でもない！","Wenn Odin Lokis Kinder doch nur
 nicht so im Stich gelassen hätte..
@@ -300,8 +300,8 @@ Loki comme ça...
 Oh ! Peu importe",,,,如果奥丁没像那样放开洛基的孩子们。没事！,,,,,,,,,,,,,,,,,,,
 SPEECH_RANK_5,"Don't be afraid of
 the enemy in front of you.
-Have faith in yourself!","눈 앞의 적을 두려워 하지 말고 
-자신의 내면을 믿어라!","Não tenha medo do novo inimigo 
+Have faith in yourself!","눈 앞의 적을 두려워 하지 말고
+자신의 내면을 믿어라!","Não tenha medo do novo inimigo
 à sua frente e confie em seu eu interior!",,"目の前の敵を恐れるな。
 自分自身を信じるのだ！","Fürchte den Feind nicht.
 Habe Vertrauen in dich selbst!",¡No tengas miedo del enemigo frente a ti y confia en ti mismo!,"ไม่ต้องกลัว
@@ -312,8 +312,8 @@ dengan Musuh yang ada didepanmu. Kamu harus percaya diri!","Ne sois pas effrayé
 les ennemis devant toi.
 Aie confiance en toi !",,,,"不要害怕在你面前的敌人。
 对自己有信心！",,,,,,,,,,,,,,,,,,,
-SPEECH_RANK_6,"Every life has 
-an elemental property!",신계의 생명은 모두 속성을 갖고 있다!,"Toda vida tem 
+SPEECH_RANK_6,"Every life has
+an elemental property!",신계의 생명은 모두 속성을 갖고 있다!,"Toda vida tem
 uma propriedade elementar!",,全ての生命が元素の性質を備えている！,"Jedes Leben hat eine
 elementare Eigenschaft!",¡Cada vida tiene una propiedad elemental!,"ทุกชีวิตมี
 คุณสมบัติของธาตุ!","Każda istota połączona
@@ -322,19 +322,19 @@ mempunyai status elemen!","Chaque vie dispose
 d'une propriété élémentaire !",,,,每个生命都具有基本的属性！,,,,,,,,,,,,,,,,,,,
 SPEECH_DUNGEON_0,"You can begin the expedition
 through the magicians below.","아래 마법진을 누르면
-탐험을 시작할 수 있다옹","Você pode começar a expedição 
+탐험을 시작할 수 있다옹","Você pode começar a expedição
 através dos mágicos abaixo.",,この下の魔法陣から　冒険に出かけることができるよ。,"Du kannst die Expedition bei
 dem Magier dort unter beginnen.",Puedes comenzar la expedición a traves de los magos de abajo.,"คุณสามารถเริ่มการสำรวจ
-ผ่านเวทมนตร์ด้านล่าง","Niech w wyprawie pomoże 
+ผ่านเวทมนตร์ด้านล่าง","Niech w wyprawie pomoże
 Ci mądrość magów.",,,"Kamu bisa memulai ekspedisi
 melalui para penyihir dibawah ini.","Tu peux commencer une expédition
 via les magiciens en dessous.",,,,您可以通过下面的魔术师开始探险。,,,,,,,,,,,,,,,,,,,
 SPEECH_DUNGEON_1,"You want to collect
 a lot of the same ingredients?
-Have you tried repeating battles yet?","똑같은 재료를 많이 모으고 싶다고? 
-반복전투는 해봤나옹?","Você deseja coletar 
-muitos dos mesmos ingredientes? 
-Você lutou contra 
+Have you tried repeating battles yet?","똑같은 재료를 많이 모으고 싶다고?
+반복전투는 해봤나옹?","Você deseja coletar
+muitos dos mesmos ingredientes?
+Você lutou contra
 repetidamente?",,"同じ素材をたくさん集めたいんだって？
 何度もくり返し戦ってみた？","Du willst mehrere Exemplare eines
 bestimmten Gegenstandes sammeln?
@@ -350,7 +350,7 @@ les mêmes ingrédients en grand nombre ?
 As-tu déjà essayé de refaire les combats ?",,,,"您想收集很多相同的成分吗？
 您是否尝试过重复战斗？",,,,,,,,,,,,,,,,,,,
 SPEECH_DUNGEON_2,"Some monster drops look trivial,
-but they are good materials.","몬스터가 떨어뜨리는 것들은 
+but they are good materials.","몬스터가 떨어뜨리는 것들은
 하찮아 보이지만 좋은 재작 재료가 된다옹","O que os monstros jogam parece trivial
 mas faz um bom material.",,"モンスターが落とす物はつまらないものに見えるけど
 とても良い素材なんだ。","Die Gegenstände, die die Monster fallen lassen,
@@ -363,7 +363,7 @@ SPEECH_DUNGEON_3,Freya has always liked us cats.,"여신님은 예로부터
 우리 고양이들을 좋아하셨다옹","Freya sempre gostou de nós, gatos.",,フレイヤ様は昔からずっと私たち猫のことを気に入ってくれている。,Freya hat uns Katzen immer gemocht.,A Freya siempre le hemos gustado los gatos.,Freya ชอบพวกแมวมาโดยตลอด,Freya zawsze lubiła naszą kocią rasę.,,,"Freya selalu menyukai kita, para kucing.","Freya nous a toujours aimé, nous les chats.",,,,芙蕾雅一直喜欢我们的猫。,,,,,,,,,,,,,,,,,,,
 SPEECH_DUNGEON_4,"The new world is balanced
 by the forces of four elements.","신계는 4가지 원소의 힘으로
-균형이 이루어지고 있다옹","O novo mundo é equilibrado 
+균형이 이루어지고 있다옹","O novo mundo é equilibrado
 pelas forças de quatro elementos.",,新世界は四大元素の力でバランスが保たれているのさ。,"Die neue Welt wird ausbalanciert
 durch die Kräfte der vier Elemente.",El nuevo mundo esta equilibrado por las fuerzas de los cuatro elementos.,"โลกใหม่สมดุล
 ด้วยพลังแห่งธาตุทั้งสี่","W nowym świecie zachowana jest równowaga
@@ -371,13 +371,13 @@ dzięki mocy czterech żywiołów.",,,"Dunia baru diseimbangkan oleh
 kekuatan dari empat elemen.","Le nouveau monde est équilibré
 par les forces des quatre éléments.",,,,新世界由四个要素的力量所平衡。,,,,,,,,,,,,,,,,,,,
 SPEECH_COMBINATION_START_0,"Started crafting.
-I'll make you a good one.","조합을 시작했다. 
-좋은 물건을 만들어 주겠네.","Comecei a fabricar. 
+I'll make you a good one.","조합을 시작했다.
+좋은 물건을 만들어 주겠네.","Comecei a fabricar.
 Vou um bom item para você.",,"製作開始だ。
 いいものを作ってやるよ。","Die Herstellung hat begonnen.
-Das Endprodukt wird ausgezeichnet sein.","Empezando a fabricar. 
+Das Endprodukt wird ausgezeichnet sein.","Empezando a fabricar.
 Te haré uno bueno.","เริ่มสร้าง
-ฉันจะทำให้คุณอย่างดี","Rozpoczęto wytwarzanie przedmiotu. 
+ฉันจะทำให้คุณอย่างดี","Rozpoczęto wytwarzanie przedmiotu.
 Jestem przekonany że będzie Ci odpowiadał.",,,"Mulai membuat.
 Aku akan membuatkanmu yang bagus.","Fabrication commencée.
 Je vais t'en fabriquer un(e) bien.",,,,开始手工制作。我会让您成为一个好人。,,,,,,,,,,,,,,,,,,,
@@ -387,8 +387,8 @@ PLAYER_ATTACK_0,Oops!,이얍!,Oops!,,よっ！,Oops!,¡Oops!,อุ่ย!,Ups!,
 PLAYER_ATTACK_1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 PLAYER_ATTACK_2,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ENEMY_INIT_0_0,Who’s that?,누구냐!,Quem é aquele?,,誰だ？,Wer ist das?,¿Quien es ese?,นั่นใครน่ะ?,Kto to?,,,Siapa itu?,Qui est-ce ?,,,,那是谁？,,,,,,,,,,,,,,,,,,,
-ENEMY_INIT_0_1,"You can't get 
-through here!",이 앞은 못 지나간다!,"Você não pode passar 
+ENEMY_INIT_0_1,"You can't get
+through here!",이 앞은 못 지나간다!,"Você não pode passar
 por aqui!",,ここは通さないぞ！,"Hier kannst du
 nicht durch!",¡No puedes conseguirlo por aquí!,"คุณไม่สามารถ
 ผ่านทางนี้!","Nie możesz
@@ -402,20 +402,20 @@ PLAYER_SKILL_3_2_0,!Wipe them all out!,!다 쓸어버려라!,!Acabe com todos el
 PLAYER_SKILL_4_2_0,"!I'm going to
 blow it all up!",!모두 날려버리겠다!,!Eu vou explodir tudo!,,!吹き飛べ!,"!Ich werde alles
 in die Luft jagen!",¡Voy a volarlo todo!,!ฉันจะระเบิดพวกมันให้หมด!,"!Wysadzę to
-wszystko w powietrze!",,,"!Aku akan 
+wszystko w powietrze!",,,"!Aku akan
 meledakkan semuanya!","!Je vais tout
 faire péter !",,,,!我要把它们全部炸掉！,,,,,,,,,,,,,,,,,,,
-PLAYER_SKILL_2_2_0,"!I'm going to 
+PLAYER_SKILL_2_2_0,"!I'm going to
 blow it all up!",!다 부셔버리겠다!,!Eu vou explodir tudo!,,!吹き飛べ!,"!Ich werde alles
 in die Luft jagen!",¡Voy a volarlo todo!,!ฉันจะระเบิดพวกมันให้หมด!,"!Wysadzę to
-wszystko w powietrze!",,,"!Aku akan 
+wszystko w powietrze!",,,"!Aku akan
 meledakkan semuanya!","!Je vais tout
 faire péter !",,,,!我要把它们全部炸掉！,,,,,,,,,,,,,,,,,,,
-PLAYER_SKILL_0_2_0,"!You can't 
+PLAYER_SKILL_0_2_0,"!You can't
 avoid this!",!이건 못 피할 걸?,"!Você não pode
 evitar isso!",,!決める!,"!Du kannst dies
 nicht vermeiden!",¡Esto no lo puedes evadir!,!คุณไม่สามารถหลีกเลี่ยงสิ่งนี้ได้!,"!Nie unikniesz
-tego!",,,"!Kamu tidak akan bisa 
+tego!",,,"!Kamu tidak akan bisa
 menghindari ini!","!Vous n'allez pas pouvoir
 éviter ça !",,,,!你无法避免！,,,,,,,,,,,,,,,,,,,
 PLAYER_BOSS_STAGE_0,Hey... what's that?,왠지 불길한데..?,Ei ... o que é isso?,,何だ…あれは？,Hey... was ist das?,Ey...¿Que es eso?,เฮ้ย ... นั่นอะไร?,Hej... co to?,,,Hey.. Apaan tuh?,Eh... qu'est-ce que c'est ?,,,,嘿...那是什么？,,,,,,,,,,,,,,,,,,,
@@ -429,23 +429,23 @@ PLAYER_LOSE_0,Ugh...,으악!,Ugh...,,うぅ…,Ugh..,Ugh...,เอิ๊ก...,U
 PLAYER_LOSE_1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 ENEMY_SKILL_1_2_0,!Burn them all!,!다 불태워버려라!,!Queime todos eles!,,!燃やせ！,!Verbrenne sie alle!,¡Quemalos a todos!,!เผาให้หมด!,!Spalić ich wszystkich!,,,!Bakar semuanya!,!Brûlez-les tous !,,,,!烧掉它们！,,,,,,,,,,,,,,,,,,,
 ENEMY_SKILL_3_2_0,!Wipe them out!,!다 쓸어버려라!,!Acabe com todos eles!,,!消えろ！,!Vernichte sie!,¡Deshazte de ellos!,!กำจัดพวกมันให้หมด!,!Zmieść ich w pył!,,,!Habisi Mereka semua!,!Éradiquez-les !,,,,!把它们全部除掉！,,,,,,,,,,,,,,,,,,,
-ENEMY_SKILL_4_2_0,"!I'm going to 
+ENEMY_SKILL_4_2_0,"!I'm going to
 blow it all up!",!모두 날려버리겠다!,!Eu vou explodir tudo!,,!吹き飛ばしてやる！,"!Ich werde alles
 in die Luft jagen!",¡Voy a volarlo todo!,!ฉันจะระเบิดพวกมันให้หมด!,"!Wysadzę to
-wszystko w powietrze!",,,"!Aku akan 
+wszystko w powietrze!",,,"!Aku akan
 meledakkan semuanya!","!Je vais tout
 faire péter !",,,,!我要把它们全部炸掉！,,,,,,,,,,,,,,,,,,,
-ENEMY_SKILL_2_2_0,"!I'm going to 
+ENEMY_SKILL_2_2_0,"!I'm going to
 destroy it all!",!다 부셔버리겠다!,!Eu vou destruir tudo!,,!破壊してやる！,"!Ich werde
 alles zerstören!",¡Voy a destruirlo todo!,ฉันจะทำรายพวกมันให้หมด!,"!Wysadzę to
-wszystko w powietrze!",,,"!Aku akan 
+wszystko w powietrze!",,,"!Aku akan
 menghancurkan semuanya!","!Je vais tout
 détruire !",,,,!我要摧毁所有的东西！,,,,,,,,,,,,,,,,,,,
-ENEMY_SKILL_0_2_0,"!You can't 
+ENEMY_SKILL_0_2_0,"!You can't
 avoid this!",!이건 못 피할 걸?,"!Você não pode
 evitar isso!",,!これは避けられないぞ！,"!Du kannst dies
 nicht vermeiden!",¡Esto no lo puedes evadir!,!คุณไม่สามารถหลีกเลี่ยงสิ่งนี้ได้!,"!Nie unikniesz
-tego!",,,"!Kamu tidak akan bisa 
+tego!",,,"!Kamu tidak akan bisa
 menghindari ini!","!Vous n'allez pas pouvoir
 éviter ça !",,,,!你无法避免！ ...,,,,,,,,,,,,,,,,,,,
 ENEMY_DAMAGE_0,Ugh!,으악!,Ugh!,,うっ！,Ugh!,¡Ugh!,เอิ๊ก!,Ugh!,,,Aw!,Pouah !,,,,啊！,,,,,,,,,,,,,,,,,,,
@@ -469,8 +469,8 @@ UI_BATTLE_EXIT_FORMAT,{0} You will return to the lobby,{0} 메인으로 이동�
 UI_BATTLE_WIN,Stage Won!,전투 승리!,Fase vencida!,,ステージクリア！,Ebene erfolgreich abgeschlossen!,¡Fase conseguida!,ผ่านด่าน!,Zwycięstwo!,,,Stage Dimenangkan!,Niveau passé !,,,,阶段赢了！,,,,,,,,,,,,,,,,,,,
 UI_BATTLE_RETRY,Retry,다시 도전,Tente novamente,,リトライ,Noch einmal probieren,Reintentar,ลองใหม่,Powtórz walkę,,,Mengulang,Ressayer,,,,重试,,,,,,,,,,,,,,,,,,,
 UI_BATTLE_RETRY_FORMAT,"You can become stronger by leveling up
-or crafting stronger equipment.","지난 스테이지를 플레이하여 레벨을 올리거나 
-장비를 제작하면 더 강해질 수 있습니다.","Você pode se tornar mais forte nivelando 
+or crafting stronger equipment.","지난 스테이지를 플레이하여 레벨을 올리거나
+장비를 제작하면 더 강해질 수 있습니다.","Você pode se tornar mais forte nivelando
 ou criando equipamentos mais fortes.",,レベルを上げたり強力な装備を製作して強くなろう。,"Du kannst stärker werden, indem du dein Level
 erhöhst oder bessere Ausrüstung herstellst.",Puedes volverte mas fuerte subiendo de nivel o fabricando mejor equipo.,"คุณสามารถแข็งแกร่งขึ้นได้โดยการอัพเลเวล
 หรือสร้างอุปกรณ์ที่แข็งแกร่งขึ้น","Możesz stać się silniejszy podnosząc poziom
@@ -492,7 +492,7 @@ UI_COMBINATION_ITEM,Combine,아이템 제작,Combinar,,アイテム製作,Kombin
 UI_COMBINATION_ERROR,Error,조합 에러,Erro,,製作エラー,Fehler,Error,ข้อผิดพลาด,Błąd,,,Error,Erreur,,,,错误,,,,,,,,,,,,,,,,,,,
 UI_COMBINATION_SUCCESS,Success!,조합 성공!,Sucesso!,,製作成功！,Erfolg!,¡Conseguido!,สำเร็จ!,Sukces!,,,Sukses!,Réussi !,,,,成功！,,,,,,,,,,,,,,,,,,,
 UI_COMBINATION_NOTIFY_FORMAT,"<size=12><color=#FFA78B>[Workshop Cat]</color></size>
-I've finished crafting {0}","<size=12><color=#FFA78B>[대장장이 고양이]</color></size> 
+I've finished crafting {0}","<size=12><color=#FFA78B>[대장장이 고양이]</color></size>
 {0} 제작을 완료하였네.","<size=12><color=#FFA78B>[Workshop Cat]</color></size>
 Eu terminei de fabricar {0}",,"<size=12><color=#FFA78B>[Workshop Cat]</color></size>
 {0} の製作が終わったぜ！","<size=12><color=#FFA78B>[Workshop Cat]</color></size>
@@ -544,7 +544,7 @@ UI_CONSUMABLES,Consumables,소모품,Consumíveis,,消耗品,Verbrauchsgegenstä
 UI_MATERIALS,Materials,재료,Materiais,,素材,Materialien,Materiales,วัสดุ,Materiały,,,Bahan,Matériaux,,,,材料,,,,,,,,,,,,,,,,,,,
 UI_SYNOPSIS_0,"Peace, harmony, and honor...
 Long lost treasures of this bygone world where only their shells remain to be felt.","평화와 조화, 그리고 긍지
-이 세 가지는 이미 신계에는 없어져, 껍데기만 남은 단어가 되고 말았다.","Paz , harmonia , e honra ... 
+이 세 가지는 이미 신계에는 없어져, 껍데기만 남은 단어가 되고 말았다.","Paz , harmonia , e honra ...
 Tesouros perdidos há muito tempo neste mundo passado, onde apenas suas conchas permanecem para serem sentidas.",,"平和、調和、そして名誉...
 これらは新界ではすでに失われ、形だけの言葉になってしまいました。","Frieden, Harmonie and Ehre...
 Lang verlorene Schätze dieser vergangenen Welt.",,"สันติสุข, ความสามัคคี, และ เกียรติยศ...
@@ -556,8 +556,8 @@ Trésors perdus depuis longtemps de ce monde révolu dans lequel seules leurs co
 UI_SYNOPSIS_1,"Odin, the Guardian of the Nine Worlds...
 To prevent the Great Battle foretold
 he scattered the three children of his adopted son Loki
-without his consent and hid them.","아홉 세계의 수호자이자 신들의 왕인 오딘. 
-그는 라그나로크, 예견되어 있던 세계의 멸망을 막기 위해 
+without his consent and hid them.","아홉 세계의 수호자이자 신들의 왕인 오딘.
+그는 라그나로크, 예견되어 있던 세계의 멸망을 막기 위해
 양자 로키의 세 자녀들을 위험의 싹을 자른다는 명분으로 뿔뿔이 흩어놓았다.","Odin, o Guardião dos Nove Mundos ...
 Para impedir a Grande Batalha prevista
 ele espalhou os três filhos de seu filho adotivo Loki
@@ -575,7 +575,7 @@ aby zapobiec przepowiedzianej Wielkiej Wojnie
 rozproszył trójkę dzieci swojego adoptowanego brata Lokiego
 bez jego zgody i je ukrył.",,,"Odin , penjaga sembilan dunia...
 untuk mencegah pertempuran hebat yang diramalkan
-dia memisahkan ketiga anak dari anak angkatnya loki 
+dia memisahkan ketiga anak dari anak angkatnya loki
 tanpa persetujuannya dan menyembunyikannya","Odin, le Gardien des Neufs Mondes...
 Afin d'éviter la Grande Bataille annoncée,
 il dispersa trois des enfants de son fils adoptif Loki,
@@ -583,7 +583,7 @@ sans son consentement et les cacha de lui.",,,,"奥丁，Nine worlds 的守护�
 他不带他的养子分散了他领养的兄弟洛基（Loki）的三个孩子进入并隐藏他们。",,,,,,,,,,,,,,,,,,,
 UI_SYNOPSIS_2,"The prophecy takes the family and the Nine Worlds apart...
 And as the conflicts between the Gods escalate,
-a strange tremor is felt in Asgard.","가족이지만 가족일 수 없었기에, 시작될 수밖에 없었던 신들의 갈등.. 
+a strange tremor is felt in Asgard.","가족이지만 가족일 수 없었기에, 시작될 수밖에 없었던 신들의 갈등..
 이 즈음, 아스가르드에는 점차 어수선한 기운이 감지되기 시작한다.","A profecia separa a família e os Nove Mundos ...
 E à medida que os conflitos entre os deuses aumentam,
 um estranho tremor é sentido em Asgard.",,"予言は彼らとナインワールドを引き裂きます...
@@ -602,7 +602,7 @@ un étrange frisson se fit sentir dans Asgard.",,,,"预言将家庭与Nine world
 随着众神之间的冲突升级，阿斯加德感到一种奇怪的震颤。",,,,,,,,,,,,,,,,,,,
 UI_SYNOPSIS_3,"The World Tree, Yggdrasil begins shivering…
 This marked the beginning of a fate foretold since the ancient times.","세계수가 노하면 세계에 거대한 위협이 닥치리라!
-이는 이미 예부터 정해져 내려오던 시련이었다.","A Árvore do Mundo , Yggdrasil começa a tremer ... 
+이는 이미 예부터 정해져 내려오던 시련이었다.","A Árvore do Mundo , Yggdrasil começa a tremer ...
 Isso marcou o início de um destino transmitido do passado.",,"世界樹、ユグドラシルが震え始め...
 これより、古より予言されていた運命が始まるのです。","Der Weltenbaum, Yggdrasil, beginnt zu frösteln...
 Dies war der Beginn eines Schickslas, das aus der Vergangenheit überliefert wurde.",,"Yggdrasil ต้นไม้โลกเริ่มสั่นสะท้าน ...
@@ -677,8 +677,8 @@ UI_NICKNAME_CONDITION,Nickname must be between 2-20 characters and can only incl
 영문자, 숫자만 사용할 수 있습니다.","O apelido deve ter entre 2 e 20 caracteres
 e pode incluir apenas caracteres alfanuméricos.",,"ニックネームは2-20文字で、
 アルファベットのみ使用できます。",Dein Name muss aus 2-20 alphanumerischen Zeichen bestehen.,,ชื่อเล่นจะต้องมี 2-20 ตัวอักษรอนุญาตให้ใช้เฉพาะตัวอักษรและตัวเลขเท่านั้น,Nazwa użytkownika musi zawierać od 2 do 20 znaków i być alfanumeryczna.,,,Nama panggilan harus diantara 2-20 karakter dan hanya dapat menyertakan karakter alfanumerik.,Votre surnom ne peut contenir que de 2 à 20 caractères alphanumériques uniquement.,,,,昵称必须介于2到20个字符之间，并且只能包含字母、数字、字符。,,,,,,,,,,,,,,,,,,,
-UI_ERROR_FORMAT,"Error occurred. 
-({0}) 
+UI_ERROR_FORMAT,"Error occurred.
+({0})
 Please restart the game.","오류가 발생했습니다.
 ({0})
 게임을 다시 실행해 주세요.","Ocorreu um erro.
@@ -699,10 +699,10 @@ Veuillez redémarrer le jeu.",,,,"发生错误。
 请重新启动游戏。",,,,,,,,,,,,,,,,,,,
 UI_ERROR_RPC_CONNECTION,"RPC server connection failed.
 Check if the game launcher is running
-and try again.","RPC 서버 연결 실패 
-게임 론처가 실행 중인지 
-확인 후 다시 실행해주세요.","Falha na conexão do servidor RPC. 
-Verifique se o iniciador de jogos está executando 
+and try again.","RPC 서버 연결 실패
+게임 론처가 실행 중인지
+확인 후 다시 실행해주세요.","Falha na conexão do servidor RPC.
+Verifique se o iniciador de jogos está executando
 e tente novamente.",,"サーバーへの接続に失敗しました。
 ゲームが起動しているか確認して、もう一度やり直してください。","Die Verbindung zum RPC Server ist fehlgeschlagen.
 Gehe sicher, dass der Launcher läuft
@@ -711,7 +711,7 @@ und versuche erneut.",,"การเชื่อมต่อเซิร์ฟ�
 แล้วลองอีกครั้ง","Połączenie z serwerem RPC zerwane.
 Sprawdź czy launcher jest uruchomiony
 i spróbuj ponownie.",,,"Koneksi ke RPC server gagal.
-Periksa apakah peluncur game sedang berjalan 
+Periksa apakah peluncur game sedang berjalan
 dan coba lagi.","Échec de connexion avec le serveur RPC.
 Vérifiez si le lanceur du jeu fonctionne
 et essayez à nouveau.",,,,"RPC服务器连接失败。
@@ -749,8 +749,8 @@ UI_RECEIVE,Receive,받기,Receber,,受信,Erhalten,,รับ,Odbierz,,,Terima,R
 UI_RECEIVED,Received,받음,Recebido,,受信済,Erhalten,,ได้รับ,Odebrano,,,Diterima,Reçu,,,,接收,,,,,,,,,,,,,,,,,,,
 UI_GET_REWARDS,Receive Rewards,보상 받기,Receba as recompensas,,報酬の受けとり,Erhalte Belohnungen,,รับรางวัล,Otrzymaj nagrody,,,Terima Hadiah,Récompenses Reçues,,,,接收奖励,,,,,,,,,,,,,,,,,,,
 UI_ITEM_ENHANCEMENT_MAIL_FORMAT,"<size=12><color=#FFA78B>[Workshop Cat]</color></size>
-I've finished upgrading {0}","<size=12><color=#FFA78B>[Workshop Cat]</color></size> 
-{0} 강화를 완료했소","<size=12><color=#FFA78B>[Workshop Cat]</color></size> 
+I've finished upgrading {0}","<size=12><color=#FFA78B>[Workshop Cat]</color></size>
+{0} 강화를 완료했소","<size=12><color=#FFA78B>[Workshop Cat]</color></size>
 Concluí o upgrade do {0}",,"<size=12><color=#FFA78B>[Workshop Cat]</color></size>
 {0} の強化が終わったぜ！","<size=12><color=#FFA78B>[Workshop Cat]</color></size>
 Die Verbesserung von {0} ist fertig.",,"<size = 12><color=#FFA78B>[Workshop Cat]</color></size>
@@ -760,8 +760,8 @@ Saya telah selesai meningkatkan {0}","<size=12><color=#FFA78B>[Workshop Cat]</co
 J'ai fini l'amélioration de {0}",,,,"<size=12><color=#FFA78B>[Workshop Cat]</color></size>
 我已经完成升级{0}",,,,,,,,,,,,,,,,,,,
 UI_SELL_CANCEL_MAIL_FORMAT,"<size=12><color=#FFA78B>[Market Cat]</color></size>
-I canceled the sales of {0}","<size=12><color=#FFA78B>[Market Cat]</color></size> 
-{0} 판매를 취소했어!","<size=12><color=#FFA78B>[Market Cat]</color></size> 
+I canceled the sales of {0}","<size=12><color=#FFA78B>[Market Cat]</color></size>
+{0} 판매를 취소했어!","<size=12><color=#FFA78B>[Market Cat]</color></size>
 Cancelei as vendas do {0}",,"<size=12><color=#FFA78B>[Market Cat]</color></size>
 {0} の販売をキャンセルしたわ。","<size=12><color=#FFA78B>[Market Cat]</color></size>
 Ich habe den Verkauf von {0} abgebrochen.",,"<size=12><color=#FFA78B>[Market Cat]</color></size>
@@ -772,7 +772,7 @@ J'ai annulé la vente de {0}",,,,"<size=12><color=#FFA78B>[Market Cat]</color></
 我取消了{0}",,,,,,,,,,,,,,,,,,,
 UI_BUYER_MAIL_FORMAT,"<size=12><color=#FFA78B>[Market Cat]</color></size>
 Purchased! {0} is yours now!","<size=12><color=#FFA78B>[Market Cat]</color></size>
-구매 완료! {0}는 이제 네거야!","<size=12><color=#FFA78B>[Market Cat]</color></size> 
+구매 완료! {0}는 이제 네거야!","<size=12><color=#FFA78B>[Market Cat]</color></size>
 Comprado! {0} agora é seu!",,"<size=12><color=#FFA78B>[Market Cat]</color></size>
 購入完了！ {0} はあなたのものよ！","<size=12><color=#FFA78B>[Market Cat]</color></size>
 GEkauft! {0} gehört nun dir!",,"<size=12><color=#FFA78B>[Market Cat]</color></size>
@@ -782,8 +782,8 @@ Terbeli! {0} milikmu sekarang!","<size=12><color=#FFA78B>[Market Cat]</color></s
 Acheté ! {0} est désormais à toi !",,,,"<size=12><color=#FFA78B>[Market Cat]</color></size>
 已购买！{0}现在是您的！",,,,,,,,,,,,,,,,,,,
 UI_SELLER_MAIL_FORMAT,"<size=12><color=#FFA78B>[Market Cat]</color></size>
-You earned {0}G by selling {1}","<size=12><color=#FFA78B>[Market Cat]</color></size> 
-{1}을 팔아서 {0}G 를 얻었어!","<size=12><color=#FFA78B>[Market Cat]</color></size> 
+You earned {0}G by selling {1}","<size=12><color=#FFA78B>[Market Cat]</color></size>
+{1}을 팔아서 {0}G 를 얻었어!","<size=12><color=#FFA78B>[Market Cat]</color></size>
 Você ganhou {0} G com a venda {1}",,"<size=12><color=#FFA78B>[Market Cat]</color></size>
 {1} が {0} G で売れたわよ。","<size=12><color=#FFA78B>[Market Cat]</color></size>
 Du hast {0}G durch den Verkauf von {1} verdient.",,"<size=12><color=#FFA78B>[Market Cat]</color></size>
@@ -806,7 +806,7 @@ UI_WARRIOR_DESCRIPTION,"The warrior class is good at close combat and is always 
 SPEECH_SHOP_BUY_0,"There's a lot of
 good stuff on sale.
 Come take a look!","좋은 물건이 많이 올라와있어!
-시간 나면 보고 가","Há muita coisa boa 
+시간 나면 보고 가","Há muita coisa boa
 chegando.",,"掘り出し物が
 続々と入荷中よ！",Es stehen viele gute Sachen an.,,"ยังมีของดีอีกเยอะ
 ที่กำลังจะมา","Nadchodzi wiele
@@ -816,17 +816,17 @@ Ayo lihat!","Il y a plein de
 bons trucs en vente.
 Viens jeter un coup d’œil.",,,,涌现出很多好东西。,,,,,,,,,,,,,,,,,,,
 SPEECH_SHOP_BUY_1,"You need different equipments
-to prepare for the ordeal.",다양한 장비가 있어야 시련을 대비할 수 있어,"Você precisa de equipamentos diferentes 
+to prepare for the ordeal.",다양한 장비가 있어야 시련을 대비할 수 있어,"Você precisa de equipamentos diferentes
 para se preparar para o calvário.",,厳しい戦いに備えて色々な装備が必要よ！,"Du brauchst verschiedene Ausrüstung,
 um dich auf deine Probe vorzubereiten.",,"คุณจะต้องมีอุปกรณ์ที่หลากหลาย
-เพื่อเตรียมพร้อมสำหรับการทดสอบ","Musisz przygotować zróżnicowany 
+เพื่อเตรียมพร้อมสำหรับการทดสอบ","Musisz przygotować zróżnicowany
 ekwipunek na tę próbę .",,,"Anda membutuhkan perlengkapan yang berbeda
 untuk persiapan cobaan itu.","Tu vas avoir besoin d'équipements variés
 pour te préparer à cette épreuve.",,,,您需要不同的设备来准备磨难。,,,,,,,,,,,,,,,,,,,
 SPEECH_SHOP_SELL_0,"If you are unsure about your item's price,
 check out how much other people
-are selling them for.","판매 가격이 고민되면 
-다른 사람들이 
+are selling them for.","판매 가격이 고민되면
+다른 사람들이
 얼마에 올렸는지 잘 살펴봐","Quando você estiver preocupado com a
 de definir o preço certo
 confira o que as outras pessoas
@@ -842,17 +842,17 @@ lihat harga orang lain
 menjualnya.","Si tu hésites sur le prix de tes articles,
 regarde pour combien les autres
 les vendent.",,,,如果您不确定物品的价格，请查看其他人以多少价格出售这些物品。,,,,,,,,,,,,,,,,,,,
-SPEECH_SHOP_SELL_1,You can always retrieve items that are unsold.,"아직 팔리지 않은 물건은 
-언제든지 다시 회수할 수 있어","Você sempre pode recuperar itens 
-que não foram vendidos.",,"出品中の商品は 
-いつでもキャンセルできるわ。","Du kannst Gegenstände, die nicht 
+SPEECH_SHOP_SELL_1,You can always retrieve items that are unsold.,"아직 팔리지 않은 물건은
+언제든지 다시 회수할 수 있어","Você sempre pode recuperar itens
+que não foram vendidos.",,"出品中の商品は
+いつでもキャンセルできるわ。","Du kannst Gegenstände, die nicht
 verkauft wurden, immer zurückholen.",,"ของชิ้นไหนที่ขายไม่ออก
 คุณสามารถเรียกคืนได้ตลอดเวลา",Zawsze możesz anulować wystawione ogłoszenia.,,,"Anda selalu dapat mengambil item
 yang belum terjual.",Tu peux toujours reprendre les articles invendus.,,,,您始终可以检索未售出的物品。,,,,,,,,,,,,,,,,,,,
 SPEECH_SHOP_REGISTER_ITEM_0,"If you are unsure about your item's price,
 check out how much other people
-are selling them for.","판매 가격이 고민되면 
-다른 사람들이 
+are selling them for.","판매 가격이 고민되면
+다른 사람들이
 얼마에 올렸는지 잘 살펴봐","Quando você estiver preocupado com a
 de definir o preço certo
 confira o que as outras pessoas
@@ -868,11 +868,11 @@ lihat harga orang lain
 menjualnya.","Si tu hésites sur le prix de tes articles,
 regarde pour combien les autres
 les vendent.",,,,如果不确定您的物品的价格，请查看其他人卖给他们的价格。,,,,,,,,,,,,,,,,,,,
-SPEECH_SHOP_GREETING_0,"You need different equipments 
-to prepare for the ordeal.",다양한 장비가 있어야 시련을 대비할 수 있어,"Você precisa de equipamentos diferentes 
+SPEECH_SHOP_GREETING_0,"You need different equipments
+to prepare for the ordeal.",다양한 장비가 있어야 시련을 대비할 수 있어,"Você precisa de equipamentos diferentes
 para se preparar para o calvário.",,厳しい戦いに備えて色々な装備が必要よ！,"Du brauchst verschiedene Ausrüstung,
 um dich auf deine Probe vorzubereiten.",,"คุณจะต้องมีอุปกรณ์ที่หลากหลาย
-เพื่อเตรียมพร้อมสำหรับการทดสอบ","Musisz przygotować zróżnicowany 
+เพื่อเตรียมพร้อมสำหรับการทดสอบ","Musisz przygotować zróżnicowany
 ekwipunek na tę próbę.",,,"Anda membutuhkan perlengkapan yang berbeda
 untuk persiapan cobaan itu.","Tu vas avoir besoin d'équipements variés
 pour te préparer à cette épreuve.",,,,您需要不同的设备来准备这项磨难。,,,,,,,,,,,,,,,,,,,
@@ -895,11 +895,11 @@ Apa? Anda sudah mengetahuinya?","Plus le rang est élevé
 et plus il y aura d'emplacements...
 Hein ? Tu es déjà au courant de tout ça ?",,,,"等级越高，那里的插槽越多...什么？
 您已经意识到这一点吗？",,,,,,,,,,,,,,,,,,,
-SPEECH_COMBINE_EQUIPMENT_0,I'll do my absolute best on this one.,"최선을 다해 
+SPEECH_COMBINE_EQUIPMENT_0,I'll do my absolute best on this one.,"최선을 다해
 무기를 만들어주지",Eu farei o meu melhor trabalho neste item.,,最高の仕事をしてやるぜ！,Ich werde mein Bestes geben.,,ฉันจะทำงานชิ้นนี้ให้ออกมาดีที่สุด,Zrobie wszystko co w mojej mocy.,,,Saya akan melakukan yang terbaik untuk yang satu ini.,Je vais faire de mon mieux pour celui-là.,,,,我会尽力做到这一点。,,,,,,,,,,,,,,,,,,,
 SPEECH_COMBINE_CONSUMABLE_0,"Consumable items disappears
 upon usage,
-but the effect is powerful.","소모템은 한번 쓰면 사라지지만 
+but the effect is powerful.","소모템은 한번 쓰면 사라지지만
 그만큼 효과가 강력하다오","O item consumível desaparece
 depois que você o usa
 mas tem um efeito forte.",,"消耗品は使うと無くなっちまうが
@@ -917,9 +917,9 @@ mais leur effet est puissant.",,,,消耗性物品消失后的用法，但效果�
 SPEECH_COMBINE_ENHANCE_EQUIPMENT_0,You can combine two equipment into one.,두 장비를 합칠 수 있어.,Você pode combinar dois equipamentos em um.,,2 つの装備品を組み合わせて 1 つにできるぞ。,Du kannst zwei Gegenstände zu einem kombinieren.,,คุณสามารถรวมอุปกรณ์สองชิ้นเข้าด้วยกัน,Możesz połączyć dwa przedmioty w jeden.,,,Anda bisa menggabungkan dua perlengkapan menjadi satu.,Tu peux combiner deux équipements en un.,,,,您可以将两个设备组合为一个。,,,,,,,,,,,,,,,,,,,
 SPEECH_COMBINE_STAGE_MATERIAL_0,You have to choose the same line of equipment as the material.,같은 장비 끼리만 합칠 수 있어!,Você tem que escolher a mesma linha de equipamentos como o material.,,あなたは、材料と機器の同じ行を選択する必要があります。,Sie haben die gleiche Art von Ausrüstung wie das Material zu wählen.,Tienes que elegir la misma línea de equipos como el material.,คุณต้องเลือกบรรทัดเดียวกันของอุปกรณ์เป็นวัสดุ,"Musisz wybrać tę samą linię urządzeń, jak materiał.","Jūs turite pasirinkti tą pačią liniją įrangos, kaip ir medžiaga.",Je moet dezelfde lijn van de apparatuur als het materiaal te kiezen.,Anda harus memilih baris yang sama peralatan sebagai bahan.,Vous devez choisir la même ligne d'équipement comme matériau.,Вы должны выбрать ту же самую линию оборудования в качестве материала.,អ្នកត្រូវតែជ្រើសរើសយកបន្ទាត់ដូចគ្នានៃឧបករណ៍ជាសម្ភារៈនេះ។,,你必须选择设备的同一行的材料。,,,,,,,,,,,,,,,,,,,
 SPEECH_RANKING_BOARD_GREETING_0,"For the glorious cats,
-Freya is handing out prizes!","영예로운 고양이들에게는 
-여신님께서 상을 주신다!","Para os gatos gloriosos 
-Freya está distribuindo prêmios!",,"栄誉あるネコたちには 
+Freya is handing out prizes!","영예로운 고양이들에게는
+여신님께서 상을 주신다!","Para os gatos gloriosos
+Freya está distribuindo prêmios!",,"栄誉あるネコたちには
 フレイヤ様が賞をくださる！","Freya gibt dir die Preise
 für die glorreichen Katzen!",,"สำหรับแมวที่มีเกียรติ
 เฟรย่าจะมอบรางวัลให้!","Ku chwale kotom,
@@ -928,7 +928,7 @@ Freya akan memberikan hadiah!","Freya distribue des prix
 pour les chats glorieux !",,,,对于光彩夺目的猫咪，芙蕾雅会颁发奖品！,,,,,,,,,,,,,,,,,,,
 SPEECH_RANKING_BOARD_FILTERED_0,"Don't be afraid of
 the enemy in front of you. Have faith in yourself!","눈 앞의 적을 두려워 하지 말고
-자신의 내면을 믿어라!",Não tenha medo do novo inimigo à sua frente e confie em seu eu interior!,,"目の前の敵を恐れるな 
+자신의 내면을 믿어라!",Não tenha medo do novo inimigo à sua frente e confie em seu eu interior!,,"目の前の敵を恐れるな
 自分自身を信じるのだ！","Fürchte den Feind nicht.
 Habe Vertrauen in dich selbst!",,"อย่ากลัวศัตรูที่อยู่ตรงหน้า
 จงเชื่อในตัวคุณเอง!","Nie lękaj się
@@ -938,7 +938,7 @@ percaya pada diri Anda sendiri!","Ne sois pas effrayé par
 les ennemis devant toi. Aie confiance en toi !",,,,不要害怕在您面前的敌人。对自己有信心！,,,,,,,,,,,,,,,,,,,
 SPEECH_RANKING_BOARD_ALL_0,"Don't be afraid of
 the enemy in front of you. Have faith in yourself!","눈 앞의 적을 두려워 하지 말고
-자신의 내면을 믿어라!",Não tenha medo do novo inimigo à sua frente e confie em seu eu interior!,,"目の前の敵を恐れるな 
+자신의 내면을 믿어라!",Não tenha medo do novo inimigo à sua frente e confie em seu eu interior!,,"目の前の敵を恐れるな
 自分自身を信じるのだ！","Fürchte den Feind nicht.
 Habe Vertrauen in dich selbst!",,"อย่ากลัวศัตรูที่อยู่ตรงหน้า
 จงเชื่อในตัวคุณเอง!","Nie lękaj się
@@ -946,7 +946,7 @@ przeciwników na swej drodze. Uwierz w siebie!",,,"Jangan takut dengan
 musuh di depan Anda
 percaya pada diri Anda sendiri!","Ne sois pas effrayé par
 les ennemis devant toi. Aie confiance en toi !",,,,不要害怕面前的敌人。对自己有信心！,,,,,,,,,,,,,,,,,,,
-SPEECH_SHOP_MOUSE_ENTER_0,"Welcome to the market! 
+SPEECH_SHOP_MOUSE_ENTER_0,"Welcome to the market!
 You can buy and sell things here!","괜찮은 물건을 제작했어?
 그럼 여기 와서 팔아봐",Bem-vindo ao mercado!nova linha] Você pode comprar e vender coisas aqui!,,"マーケットへようこそ！
 ここではアイテムの売買ができるわ。","Willkommen auf dem Markt!
@@ -955,7 +955,7 @@ Hier kannst du Sachen kaufen und verkaufen!",,"ยินดีต้อนรั
 Możesz tutaj sprzedawać i kupować różne rzeczy!",,,"Selamat datang di pasar!
 Anda dapat membeli dan menjual barang di sini!","Bienvenu sur le marché !
 Tu peux acheter et vendre des articles ici !",,,,欢迎来到市场！您可以在这里买卖东西！,,,,,,,,,,,,,,,,,,,
-SPEECH_SHOP_CLICK_0,"If you reach level {0}, 
+SPEECH_SHOP_CLICK_0,"If you reach level {0},
 you can enter the market.",{0} 레벨을 먼저 달성해야 해.,"Se você atingir o nível {0} ,
 poderá entrar no mercado.",,レベルが {0} になればマーケットに入れるわ。,"Wenn du Level {0} erreichst,
 kannst du den Markt betreten.",,"คุณต้องไปถึงระดับ {0} ก่อน
@@ -965,15 +965,15 @@ Anda bisa memasuki pasar.","Tu peux entrer sur le marché une
 fois que tu auras atteint le niveau {0}.",,,,如果达到{0}级，您可以进入市场。,,,,,,,,,,,,,,,,,,,
 SPEECH_COMBINE_MOUSE_ENTER_0,"Want to make equipment or food?
 Then this is the right place.","전투로 재료를 모았나?
-그럼 내게 오시게","Deseja fazer equipamentos ou alimentos? 
+그럼 내게 오시게","Deseja fazer equipamentos ou alimentos?
 Aqui.",,装備品や食料が欲しいならここだぜ。,"Du willst Ausrüstung oder Essen produzieren?
 Dann bist du hier genau richtig.",,"ต้องการจะทำอุปกรณ์หรืออาหาร?
 มาที่นี่.","Czy Chcesz stworzyć przedmior lub potrawę?
 Tutaj.",,,"Ingin membuat perlengkapan atau makanan?
 Datang kemari.","Tu veux faire un équipement ou de la nourriture ?
 Alors, tu es au bon endroit.",,,,想要制作装备还是食物？这里。,,,,,,,,,,,,,,,,,,,
-SPEECH_COMBINE_CLICK_0,"Do you want to craft items? 
-You need to reach level {0} first.",{0} 레벨을 먼저 달성해야 해.,"Deseja criar itens? 
+SPEECH_COMBINE_CLICK_0,"Do you want to craft items?
+You need to reach level {0} first.",{0} 레벨을 먼저 달성해야 해.,"Deseja criar itens?
 Você precisa atingir o nível {0} primeiro.",,"アイテムを作りたいのか？
 まずレベルを {0} まで上げないとな。","Du willst neue Gegenstände herstellen?
 Zuerst musst du Level {0} erreichen.",,"คุณต้องการสร้างไอเท็ม?
@@ -984,7 +984,7 @@ Tu dois d'abord atteindre le niveau {0}.",,,,"您要制作工艺品吗？
 您需要首先达到级别{0}。",,,,,,,,,,,,,,,,,,,
 SPEECH_RANK_MOUSE_ENTER_0,"Do you want to know how strong you are?
 Check out the rankings here!","영예의 전당에
-이름을 올려라!","Você quer saber o quão forte você é? 
+이름을 올려라!","Você quer saber o quão forte você é?
 Confira as classificações aqui!",,"自分の強さが知りたいか？
 ここでランキングを確認するといい。","Wenn du wissen willst wie stark du bist,
 kannst du dir hier die Rangliste anschauen!",,"คุณอยากรู้ว่าคุณแข็งแกร่งแค่ไหน?
@@ -1004,9 +1004,9 @@ Anda tidak bisa masuk sampai Anda mencapai level {0}.","Arrête !
 Tu ne peux pas entrer tant que tu ne seras pas au niveau {0}.",,,,后退！直到达到级别{0}，您才能进入。,,,,,,,,,,,,,,,,,,,
 SPEECH_DUNGEON_MOUSE_ENTER_0,"Press the portal below.
 Let’s visit other worlds and
-join the battle!","아래 마법진을 누르면 
-탐험을 시작할 수 있다옹","Pressione o portal abaixo. 
-Vamos visitar outros mundos e 
+join the battle!","아래 마법진을 누르면
+탐험을 시작할 수 있다옹","Pressione o portal abaixo.
+Vamos visitar outros mundos e
 participe da batalha!",,"この下の魔法陣から
 冒険に出かけることができるよ","Press the portal below.
 Let’s visit other worlds and
@@ -1022,7 +1022,7 @@ rejoignons le combat !",,,,"按下面的开关。
 让我们参观其他世界并加入战斗吧！",,,,,,,,,,,,,,,,,,,
 UI_LOGIN_CONTENT,"This is a community-powered
 fantasy world that fully runs on the blockchain.","It is a fantasy world on the blockchain.
-To start the game, you need to create your account.","Este é um mundo de fantasia 
+To start the game, you need to create your account.","Este é um mundo de fantasia
 alimentado pela comunidade que roda totalmente em blockchain.",,"ここはコミュニティによって作られるファンタジー世界であり、
 全てがブロックチェーン上で実行されています","Dies ist eine von der Community betriebene Fantasiewelt, die vollständig auf der Blockchain läuft.",,"มันคือโลกแฟนตาซีบนบล็อคเชน
 เพื่อเริ่มเกม, คุณจะต้องสร้างบัญชีของคุณก่อน","Jest to świat fantasy, który działa w oparciu o blockchain.",,,"Ini adalah dunia fantasi yang diberdayakan
@@ -1042,8 +1042,8 @@ UI_LOGIN_ENTER_PRIVATE_KEY,e.g. E3AB97633410A6513TPA3...557B,e.g. E3AB97633410A6
 UI_LOGIN_ACCOUNT,Your Account,계정,Sua conta,,アカウント,Dein Konto,,บัญชีผู้ใช้,Twoje konto,,,Akun Anda,Votre compte,,,,您的帐户,,,,,,,,,,,,,,,,,,,
 UI_UNLOCK_COMBINATION,"Congratulations!
 You can enter the workshop now!
-Go back to lobby and craft something now.",조합 개방,"Parabéns! 
-Você pode participar do workshop agora! 
+Go back to lobby and craft something now.",조합 개방,"Parabéns!
+Você pode participar do workshop agora!
 Volte ao principal e crie algo agora.",,"工房に入れるようになりました！
 ロビーに戻ってアイテムを製作してみましょう。","Herzlichen Glückwunsch!
 Du kannst die Werkstatt nun betreten!
@@ -1059,8 +1059,8 @@ Retourne au lobby et fabrique quelque chose dès maintenant.",,,,"恭喜！您�
 回到大厅并开始制作。",,,,,,,,,,,,,,,,,,,
 UI_UNLOCK_SHOP,"Congratulations!
 You can enter the market now!
-Go back to lobby and trade items with others.",상점 개방,"Parabéns! 
-Você pode entrar no mercado agora! 
+Go back to lobby and trade items with others.",상점 개방,"Parabéns!
+Você pode entrar no mercado agora!
 Volte ao principal e negocie com outros.",,"マーケットに入れるようになりました！
 ロビーに戻ってお店をのぞいてみましょう。","Herlichen Glückwunsch!
 Du kannst den Markt jetzt betreten!
@@ -1076,8 +1076,8 @@ Retourne au lobby et échange des articles avec les autres.",,,,"恭喜！您现
 回到大厅并与其他人交易物品。",,,,,,,,,,,,,,,,,,,
 UI_UNLOCK_RANKING,"Congratulations!
 You can now check your ranking!
-Go back to lobby and see how strong you are.",랭킹 개방,"Parabéns! 
-Agora você pode verificar sua classificação! 
+Go back to lobby and see how strong you are.",랭킹 개방,"Parabéns!
+Agora você pode verificar sua classificação!
 Volte ao main e veja como você é forte.",,"ランキングを確認できるようになりました！
 ロビーに戻ってあなたのランクを見てみましょう。","Herzlichen Glückwunsch!
 Du kannst dir jetzt die Rangliste ansehen!
@@ -1114,7 +1114,7 @@ UI_CONFIRM_RESET_KEYSTORE_TITLE,Revoke Private Key,비밀키 폐기,Revogar chav
 UI_CONFIRM_RESET_STORE_CONTENT,Clear cache and close Nine Chronicles.,캐시를 비우고 나인 크로니클을 종료합니다.,Limpe o cache com o fechamento do Nine Chronicles.,,キャッシュをクリアしてナインクロニクルを終了します。,Leere den Cache und schließe Nine Chronicles,,ล้างแคชและออกจาก Nine Chronicle,Wyczyść pamięć podręczną i zamknij Nine Chronicles.,,,Bersihkan Cache dan tutup Nine Chronicles.,Nettoyer le cache et fermer Neuf Chroniques,,,,清除缓存并关闭Nine Chronicles。,,,,,,,,,,,,,,,,,,,
 UI_CONFIRM_RESET_KEYSTORE_CONTENT,"Revoke private key and close Nine Chronicles.
 Revoked private keys can't be recovered.","나인 크로니클을 종료하고 비밀 키를 폐기 합니다.
-폐기된 비밀 키는 되돌릴 수 없습니다.","Chave privada de revogação com Nine Chronicles fechada. 
+폐기된 비밀 키는 되돌릴 수 없습니다.","Chave privada de revogação com Nine Chronicles fechada.
 Revogação Privada não pode ser recuperada.",,"秘密鍵を破棄してナインクロニクルを終了します。
 破棄した秘密鍵を元に戻すことはできません。","Verwerfe den privaten Schlüssel und schließe Nine Chronicles.
 Verworfene private Schlüssel können nicht wiederhergestellt werden.",,"เพิกถอน Private Key และ ปิด Nine Chronicles
@@ -1126,7 +1126,7 @@ UI_OPEN_LOG,Open Log,로그 열기,Abrir log,,ログを開く,Protokoll öffnen,
 UI_MAINTENANCE,System Maintenance,시스템 점검중,Manutenção de Sistema,,システムメンテナンス,Systemwartung,,ระบบอยู่ระหว่างการปรับปรุง,Konserwacja systemu,,,Sistem dalam maintenance,Maintenance Système,,,,系统维护,,,,,,,,,,,,,,,,,,,
 UI_MAINTENANCE_CONTENT,"We are undergoing system maintenance.
 During this time, please join our discord server and check the maintenance schedule.","시스템 점검중입니다.
-디스코드 채널에 방문해서 점검 일정을 확인해 주세요.","Estamos em manutenção. 
+디스코드 채널에 방문해서 점검 일정을 확인해 주세요.","Estamos em manutenção.
 Durante esse período, entre no nosso canal Discord e verifique o cronograma de manutenção.",,"システムメンテナンス中です。
 Discord でメンテナンススケジュールを確認できます。","Wir führen eine Systemwartung durch.
 Den Wartungszeitplan kannst du auf unserem Discord Server finden.",,"ระบบกำลังปิดปรับปรุง
@@ -1303,3 +1303,5 @@ UI_PRESS_TO_START,Press to Start,Press to Start,Press to Start,Press to Start,Pr
 UI_MAIN_MENU_MIMISBRUNNR,Mimisbrunnr,Mimisbrunnr,Mimisbrunnr,Mimisbrunnr,Mimisbrunnr,Mimisbrunnr,Mimisbrunnr,Mimisbrunnr,,,Mimisbrunnr,Mimisbrunnr,,,,Mimisbrunnr,,,,,,,,,,,,,,,,,,,,
 UI_MIMISBRUNNR,Mimisbrunnr,Mimisbrunnr,Mimisbrunnr,Mimisbrunnr,Mimisbrunnr,Mimisbrunnr,Mimisbrunnr,Mimisbrunnr,,,Mimisbrunnr,Mimisbrunnr,,,,Mimisbrunnr,,,,,,,,,,,,,,,,,,,,
 UI_MIMISBRUNNR_START_FAIELD,Your equipments must match the dungeon’s elemental type.,던전 속성에 맞는 장비를 착용하세요.,Você deve usar o equipamento para combinar o elemento calabouço,Você deve usar o equipamento para combinar o elemento calabouço,あなたはダンジョンの要素に一致するように機器を着用しなければなりません,Sie müssen die Geräte tragen das Verlies Element passen,Debe usar el equipo para que coincida con el elemento mazmorra,คุณต้องสวมเครื่องให้ตรงกับองค์ประกอบดันเจี้ยน,Musisz nosić urządzenia pasujące do elementu Lochach,"Jūs turite dėvėti įrangą, kad atitiktų požemių elementą",U moet de apparatuur om de dungeon element overeen te dragen,Anda harus memakai peralatan untuk mencocokkan elemen penjara,Vous devez porter l'équipement pour correspondre à l'élément de donjon,"Вы должны иметь оборудование, чтобы соответствовать элементу подземелий",អ្នកត្រូវតែពាក់ឧបករណ៍ដើម្បីផ្គូផ្គងធាតុអណ្ដូងនេះ,,你必须穿装备的地牢匹配元素,,,,,,,,,,,,,,,,,,,
+UI_DAILY_REWARD_MAIL_FORMAT,The Daily Rewards has arrived due to increased prosperity!,번영도가 증가하여 데일리 보상을 수령합니다!,As recompensas diárias chegou devido ao aumento da prosperidade!,,毎日の報酬は、増加繁栄に到着しました！,Die täglichen Belohnungen angekommen aufgrund gestiegener Wohlstand!,Las recompensas diarias ha llegado debido al aumento de la prosperidad!,รางวัลประจำวันได้มาเนื่องจากความเจริญรุ่งเรืองที่เพิ่มขึ้น!,Dzienna nagrody przybył ze względu na wzrost dobrobytu!,Dienos Apdovanojimai atvyko dėl didesnio klestėjimo!,The Daily Rewards is gekomen als gevolg van de toegenomen welvaart!,Rewards Harian telah tiba karena peningkatan kemakmuran!,Les récompenses quotidiennes est arrivé en raison de la prospérité accrue!,Ежедневные награды прибыли из-за возросшее благосостояние!,នេះជារង្វាន់ប្រចាំថ្ងៃបានមកដល់ដោយសារតែការកើនឡើងភាពរុងរឿង!,,每日奖励已经来临，由于日益繁荣！,,,,,,,,,,,,,,,,,,,
+UI_DAILY_REWARD_POPUP_TITLE,Daily Rewards,데일리 보상,Recompensas diárias,,デイリーリワード,tägliche Belohnungen,Las recompensas diarias,รางวัลประจำวัน,Codzienne nagrody,Dienos Apdovanojimai,dagelijks Rewards,Hadiah harian,Récompenses journalières,Ежедневные награды,រង្វាន់ប្រចាំថ្ងៃ,,每日奖励,,,,,,,,,,,,,,,,,,,

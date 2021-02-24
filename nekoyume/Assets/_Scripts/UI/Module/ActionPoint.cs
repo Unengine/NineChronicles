@@ -31,6 +31,9 @@ namespace Nekoyume.UI.Module
         [SerializeField]
         private EventTrigger eventTrigger = null;
 
+        [SerializeField]
+        private GameObject loading;
+
         private readonly List<IDisposable> _disposables = new List<IDisposable>();
         private int _currentActionPoint;
 
@@ -116,6 +119,12 @@ namespace Nekoyume.UI.Module
         public void SetEventTriggerEnabled(bool value)
         {
             eventTrigger.enabled = value;
+        }
+
+        public void SetActiveLoading(bool value)
+        {
+            loading.SetActive(value);
+            text.enabled = !value;
         }
     }
 }

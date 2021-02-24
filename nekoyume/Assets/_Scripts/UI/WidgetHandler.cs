@@ -10,7 +10,7 @@ namespace Nekoyume.UI
         private MessageCatManager _messageCatManager;
         private BottomMenu _bottomMenu;
         private Battle _battle;
-        private StageLoadingScreen _stageLoadingScreen;
+        private Menu _menu;
 
         public bool IsActiveTutorialMaskWidget { get; set; }
 
@@ -19,13 +19,9 @@ namespace Nekoyume.UI
                 ? _messageCatManager
                 : (_messageCatManager = Widget.Find<MessageCatManager>());
 
-        public BottomMenu BottomMenu =>
-            _bottomMenu ? _bottomMenu : (_bottomMenu = Widget.Find<BottomMenu>());
-
+        public BottomMenu BottomMenu => _bottomMenu ? _bottomMenu : (_bottomMenu = Widget.Find<BottomMenu>());
         public Battle Battle => _battle ? _battle : (_battle = Widget.Find<Battle>());
-
-        public StageLoadingScreen StageLoadingScreen =>
-            _stageLoadingScreen ? _stageLoadingScreen : (_stageLoadingScreen = Widget.Find<StageLoadingScreen>());
+        public Menu Menu => _menu ? _menu : (_menu = Widget.Find<Menu>());
 
         public void HideAllMessageCat()
         {

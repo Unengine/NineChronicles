@@ -214,6 +214,12 @@ namespace Nekoyume.BlockChain
                         UI.Notification.Push(
                             Nekoyume.Model.Mail.MailType.System,
                             L10nManager.Localize("UI_RECEIVED_DAILY_REWARD"));
+                        var avatarAddress = eval.Action.avatarAddress;
+                        var itemId = eval.Action.dailyRewardResult.materials.First().Key.ItemId;
+                        var itemCount = eval.Action.dailyRewardResult.materials.First().Value;
+                        LocalLayerModifier.RemoveItem(avatarAddress, itemId, itemCount);
+                        LocalLayerModifier.AddNewAttachmentMail(avatarAddress, eval.Action.dailyRewardResult.id);
+                        WidgetHandler.Instance.Menu.SetActiveActionPointLoading(false);
                     }
 
                 }).AddTo(_disposables);
