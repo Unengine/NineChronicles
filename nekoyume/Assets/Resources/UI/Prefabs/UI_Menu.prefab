@@ -575,6 +575,7 @@ MonoBehaviour:
   questExclamationMark: {fileID: 7029768199667457463}
   mimisbrunnrExclamationMark: {fileID: 1776930382303862003}
   guidedQuest: {fileID: 5555585240277224902}
+  actionPoint: {fileID: 4790419082042193309}
   combinationSpriteRenderer: {fileID: 1808042785}
   hasSpriteRenderer: {fileID: 7372892341261787732}
 --- !u!95 &2578250583497771604

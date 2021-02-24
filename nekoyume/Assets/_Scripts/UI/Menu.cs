@@ -67,6 +67,9 @@ namespace Nekoyume.UI
         [SerializeField]
         private GuidedQuest guidedQuest = null;
 
+        [SerializeField]
+        private ActionPoint actionPoint;
+
         private Coroutine _coLazyClose;
 
         public SpriteRenderer combinationSpriteRenderer;
@@ -533,5 +536,10 @@ namespace Nekoyume.UI
 
         public void TutorialActionClickGuidedQuestWorldStage2() =>
             HackAndSlash(GuidedQuest.WorldQuest?.Goal ?? 4);
+
+        public void SetActiveActionPointLoading(bool value)
+        {
+            actionPoint.SetActiveLoading(value);
+        }
     }
 }
