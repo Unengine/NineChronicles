@@ -28,6 +28,11 @@ namespace Nekoyume.UI.Module
             {
                 throw new SerializeFieldNullException();
             }
+
+            foreach (var slot in slots)
+            {
+                slot.Set(null, RaiseSlotClicked, RaiseSlotDoubleClicked);
+            }
         }
 
         public bool TryGetSlot(ItemSubType itemSubType, out EquipmentSlot outSlot)
