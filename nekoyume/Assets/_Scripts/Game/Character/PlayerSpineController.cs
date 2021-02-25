@@ -165,7 +165,7 @@ namespace Nekoyume.Game.Character
                 !_currentWeaponVFX &&
                 (!_currentWeaponVFXPrefab?.Equals(weaponVFXPrefab) ?? true))
             {
-                var weaponVFX = Instantiate(weaponVFXPrefab, transform);
+                var weaponVFX = Instantiate(weaponVFXPrefab, transform.parent);
 
                 var weaponSlot = SkeletonAnimation.Skeleton.FindSlot(WeaponSlot);
                 var boneName = weaponSlot.Bone.Data.Name;
